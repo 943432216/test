@@ -19,10 +19,13 @@ body {
   position: relative;
   width: 100%;
   height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 html {
   width: 100%;
   height: 100%;
+  overflow: hidden;
 }
 body * {
   /*文字设置*/
@@ -63,7 +66,6 @@ section {
   background: #fff;
   width: 100%;
   padding-bottom: 0.16rem;
-  overflow: hidden;
 }
 ._con {
   float: left;
@@ -73,7 +75,7 @@ section {
   overflow: hidden;
 }
 .sectionh {
-  height: 13.8rem;
+  height: 11.8rem;
 }
 .color {
   color: #B60005 !important;
@@ -520,7 +522,7 @@ footer p {
   float: left;
   display: block;
 }
-.product p a{
+.product p a {
   text-align: center;
   background: #f3e1be;
   height: 1.1rem;

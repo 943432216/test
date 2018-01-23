@@ -24,10 +24,14 @@ body {
   position: relative;
   width: 100%;
   height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 html {
   width: 100%;
   height: 100%;
+  overflow: hidden;
+  
 }
 body * {
   /*文字设置*/
@@ -50,9 +54,9 @@ li {
 .width{width: 100%;}
 .float{float: left;}
 .img{width: 100%;max-width: 100%;display: block;float: left;}
-section{background: #fff;width:100%;padding-bottom:8/@r;overflow: hidden;}
+section{background: #fff;width:100%;padding-bottom:8/@r;}
 ._con{float: left;width: 96%;padding: 10/@r 2% 20/@r 2%;background: #F7F7F7;overflow: hidden;}
-.sectionh{height: 690/@r;}
+.sectionh{height: 590/@r;}
 .color{color: #B60005 !important;}
 .bgcolor{background: #B60005 !important;}
 .bor_bn{border-bottom:1px solid #B60005;}
@@ -65,7 +69,6 @@ header{background: #fff;width: 100%;height: 100/@r;background: #fff;}
 .i_ul{position: absolute;width: 200/@r;right:0;top:100/@r;z-index: 999999;background:url(../img/navlogo.png) no-repeat bottom #d13600;background-size: 100% 430/@r;display: none;}
 .i_ul ul li{float: left;width: 100%;}
 .i_ul ul li a{overflow:hidden;white-space:nowrap;color:#fff;font-size: 24/@r;text-align: center;height:70/@r;line-height: 70/@r;width:92%;display: block;border-bottom:1px solid #b60005;margin:0 4%;}
-//.i_ul ul li:nth-of-type(1) a{border-bottom:none;}
 .i_uls{width: 200/@r;}
 .i_uls li{float: left;width: 100%;background:rgba(236,191,127,0.5) !important;}
 .i_uls li a{color:#fff;font-size: 24/@r;text-align: center;height:45/@r !important;line-height: 45/@r !important;width:92%;border-bottom:1px solid rgba(255,255,255,0.4) !important;margin:0 4%;}
@@ -145,7 +148,7 @@ footer p{float: left;width: 100%;font-size: 16/@r;text-align: center;color: #000
 
 .product{background: #fff;width: 40%;margin:20/@r 5% 220/@r 5%;overflow: hidden;float: left;}
 .product span{width:100%;height: 315/@r;float: left;display: block;}
-.product p{text-align: center;background:#f3e1be;height: 55/@r;line-height:55/@r;color: #232323;float: left;width:100%;font-size: 24/@r;}
+.product p a{text-align: center;background:#f3e1be;height: 55/@r;line-height:55/@r;color: #232323;float: left;width:100%;font-size: 24/@r;}
 
 
 //detail
