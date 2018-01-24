@@ -1,3 +1,11 @@
+<?php
+include('inc/site_config.php');
+include($site_root_path.'/inc/set/ext_var.php');
+include($site_root_path.'/inc/fun/mysql.php');
+include($site_root_path.'/inc/function.php');
+include($site_root_path.'/inc/common.php');
+$pageName='index';
+?>
 <!DOCTYPE html>
 <html>
 
@@ -19,76 +27,64 @@
 		<div class="xb_box">
 			<div class="i_ul">
 				<ul>
-					<li class="sy">
-						<div class="width float"><a href="index.html" >首页</a></div>
+					<li style="background: #B60005;">
+						<a href="index.html">首页</a>
 					</li>
 					<li class="staOne">
 						<a href="javascript:;">关于心宝</a>
 						<ul class="i_uls">
+							<?php
+							if(!empty($art_group[1])){
+								foreach((array)$art_group[1] as $item){
+							?>
 							<li>
-								<a href="company_profile.html">公司简介</a>
+								<a href="<?=get_url('article',$item)?>"><?=$item['Title']?></a>
 							</li>
-							<li>
-								<a href="Development.html">发展历程</a>
-							</li>
-							<li>
-								<a href="Culture.html">企业文化</a>
-							</li>
-							<li>
-								<a href="honor.html">企业荣誉</a>
-							</li>
-							<li>
-								<a href="speech.html">董事长致词</a>
-							</li>
+							<?php }}?>
 						</ul>
 					</li>
-					<li class="staOne" id="t2">
-						<div class="float width"><a href="javascript:;">产品中心</a></div>
+					<li class="staOne">
+						<a href="javascript:;">产品中心</a>
 						<ul class="i_uls">
+							<?php
+							if(!empty($product_cate)){
+								foreach((array)$product_cate as $item){
+							?>
 							<li>
-								<a href="product_01.html">心宝丸</a>
+								<a href="<?=get_url('product_category',$item)?>"><?=$item['Category']?></a>
 							</li>
-							<li>
-								<a href="product_02.html">龟鹿补肾片</a>
-							</li>
-							<li>
-								<a href="product_03.html">蒲地蓝消炎片</a>
-							</li>
-							<li>
-								<a href="product_04.html" >蒲地蓝消炎胶囊</a>
-							</li>
+							<?php }}?>
 						</ul>
 					</li>
 					<li class="staOne">
 						<a href="javascript:;">心肾同治</a>
 						<ul class="i_uls">
+							<?php
+							if(!empty($info2_cate)){
+								foreach((array)$info2_cate as $item){
+							?>
 							<li>
-								<a href="heart.html">心肾相交理论</a>
+								<a href="<?=get_url('info2_category',$item)?>"><?=$item['Category']?></a>
 							</li>
-							<li>
-								<a href="heart01.html">心宝丸的临床应用</a>
-							</li>
-							<li>
-								<a href="heart02.html">龟鹿补肾片健康手册</a>
-							</li>
+							<?php }}?>
 						</ul>
 					</li>
 					<li class="staOne">
 						<a href="javascript:;">最新动态</a>
 						<ul class="i_uls">
+							<?php
+							if(!empty($info_cate)){
+								foreach((array)$info_cate as $item){
+									if($item['CateId'] == 7){continue;}
+							?>
 							<li>
-								<a href="company_new.html">公司动态</a>
+								<a href="<?=get_url('info_category',$item)?>"><?=$item['Category']?></a>
 							</li>
-							<li>
-								<a href="industry_new.html">行业动态</a>
-							</li>
-							<li>
-								<a href="video.html">视频中心</a>
-							</li>
+							<?php }}?>
 						</ul>
 					</li>
 					<li>
-						<a href="contact.html">联系心宝</a>
+						<a href="/contact.php?AId=11">联系心宝</a>
 					</li>
 					<li>
 						<a href="https://sso.jingoal.com/#/login">员工登录</a>
@@ -103,15 +99,16 @@
 			<div class="banner float width">
 				<div id="marquee">
 					<ul>
+						<?php
+						if($pageName=='index'){
+							$banner=$db->get_one('ad',"AId='1'");
+							for($i=0;$i<5;$i++){
+								if(!is_file($site_root_path.$banner['PicPath_'.$i]))continue;
+						?>
 						<li>
-							<a href="javascript:;"><img src="img/banner.jpg" class="img"></a>
+							<a href="<?=get_url('product',$product_row[$i])?>"><img src="<?=$banner['PicPath_'.$i]?>" class="img"></a>
 						</li>
-						<li>
-							<a href="javascript:;"><img src="img/banner_01.jpg" class="img"></a>
-						</li>
-						<li>
-							<a href="javascript:;"><img src="img/banner_02.jpg" class="img"></a>
-						</li>
+						<?php }}?>
 					</ul>
 				</div>
 			</div>
