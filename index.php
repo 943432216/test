@@ -143,7 +143,7 @@ $pageName='index';
 				</div>
 			</div>
 			<!--<div class="stc_title"><img src="img/title.png" alt=""  class="img"/></div>-->
-			<section class="left width sectionh">
+			<section class="float width sectionh">
 				<div class="stc_title"><img src="img/title.png" alt="" class="img" /></div>
 				<div class="_con">
 					<div class="new_boxs float">

@@ -76,6 +76,7 @@ section {
 }
 .sectionh {
   height: 11.8rem;
+  position: relative;
 }
 .color {
   color: #B60005 !important;
@@ -419,10 +420,11 @@ footer p {
 }
 .logol {
   position: absolute;
-  right: 0.2rem;
-  bottom: 0.2rem;
+  right: 0.3rem;
+  bottom: 0.4rem;
   width: 2.44rem;
   height: 3.44rem;
+  z-index: 999999;
 }
 .new_left {
   width: 24%;
