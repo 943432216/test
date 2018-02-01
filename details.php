@@ -113,7 +113,7 @@ $content=$db->get_one('info2_contents',"InfoId='29'");
 				<div class="header_nav"></div>
 			</header>
 			<div style="font-size: 13px;">
-				<?=$content['Contents']?>
+				<?=$db->get_value('info_contents', "InfoId='208'", 'Contents');?>
 			</div>
 			
 			<div class="detail_box float width">
