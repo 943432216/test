@@ -5,6 +5,8 @@ include($site_root_path.'/inc/fun/mysql.php');
 include($site_root_path.'/inc/function.php');
 include($site_root_path.'/inc/common.php');
 $pageName='index';
+$news_data = $db->get_all('info', 'InfoId=207', '*', 'InfoId');
+//var_dump($news_data);exit;
 ?>
 <!DOCTYPE html>
 <html>
@@ -149,7 +151,7 @@ $pageName='index';
 					<div class="new_boxs float">
 						<div class="logol"><img src="img/logos.png" class="img"/></div>
 						<div class="new_s">
-							<span class="new_left"><img src="img/50f750d822.jpg" class="img"/></span>
+							<span class="new_left"><img src=<?= "'" . $news_data[0]['ThumbPic'] . "'"?> class="img"/></span>
 							<span class="new_right">
 								<ul>
 									<li><a href="#">喜讯！喜讯！</a></li>
