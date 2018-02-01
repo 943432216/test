@@ -298,7 +298,7 @@ footer p {
   float: left;
   background: #f7f7f7;
   padding: 0.4rem 4%;
-  height: 9.2rem;
+  height: 10rem;
 }
 .form_bg {
   background: #fff;
@@ -322,7 +322,7 @@ footer p {
   font-size: 0.28rem;
 }
 .contant_form span p {
-  width: 1.4rem;
+  width: 1.6rem;
   height: 0.72rem;
   float: left;
   color: #999;
@@ -390,7 +390,7 @@ footer p {
 .map_top span p:nth-of-type(1) {
   color: #999999;
   font-size: 0.36rem;
-  width: 15%;
+  width: 18%;
 }
 .map_top span p:nth-of-type(2) {
   color: #232323;
