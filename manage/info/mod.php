@@ -62,6 +62,11 @@ if($_POST){
 			$SmallPicPath=$S_PicPath;
 		}
 	}
+	//var_dump($_FILES);exit;
+	if ($_FILES['thumb']['error'] == UPLOAD_ERR_OK && $_FILES['thumb']['size']/1024 < 5*1024) {
+		$aa = move_uploaded_file($_FILES['thumb']['tmp_name'], '/up_file/' . $_FILES['thumb']['name']);
+		var_dump($aa);exit;
+	}
 	
 	$db->update('info', "InfoId='$InfoId'", array(
 			'CateId'			=>	$CateId,
@@ -139,6 +144,10 @@ include('../../inc/manage/header.php');
 			</td>
 		</tr>
 	<?php }?>
+	<tr>
+		<td>缩略图</td>
+		<td><input type="file" name="thumb"></td>
+	</tr>
 	<?php if(get_cfg('info.ext_url')){?>
 		<tr>
 			<td nowrap><?=get_lang('info.ext_url');?>:</td>
