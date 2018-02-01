@@ -58,14 +58,16 @@
   overflow: hidden;
 }
 .product_name {
-  width: 98%;
+  width: 96%;
   float: left;
-  padding: 0.5rem 2% 0.5rem 0;
+  padding: 0.5rem 2% 0.2rem 2%;
+  background: #fff;
+  margin-bottom: 0.3rem;
 }
 .product_name h5 {
   color: #232323;
   width: 100%;
-  font-size: 0.52rem;
+  font-size: 0.56rem;
   padding: 0;
   margin: 0;
 }
