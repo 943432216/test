@@ -5,8 +5,11 @@ include($site_root_path.'/inc/fun/mysql.php');
 include($site_root_path.'/inc/function.php');
 include($site_root_path.'/inc/common.php');
 $pageName='index';
-$news_data = $db->get_all('info', 'InfoId=207', '*', 'InfoId');
-//var_dump($news_data);exit;
+$company_state = $db->get_all('info', 'CateId=1', 'InfoId,ThumbPic,Title,BriefDescription,PageUrl', 'InfoId desc');
+$industry_state = $db->get_all('info', 'CateId=2', 'InfoId,ThumbPic,Title,BriefDescription,PageUrl', 'InfoId desc');
+$clinic_use = $db->get_all('info2', 'CateId=9', 'InfoId,ThumbPic,Title,BriefDescription,PageUrl', 'InfoId desc');
+$health_bushen = $db->get_all('info2', 'CateId=10', 'InfoId,ThumbPic,Title,BriefDescription,PageUrl', 'InfoId desc');
+//var_dump($clinic_use);exit;
 ?>
 <!DOCTYPE html>
 <html>
