@@ -152,8 +152,8 @@ $company_state = json_encode($company_state, JSON_UNESCAPED_UNICODE);
 			<section class="float width sectionh">
 				<div class="stc_title"><img src="img/title.png" alt="" class="img" /></div>
 				<div class="_con">
+					<div class="logol"><img src="img/logos.png" class="img"/></div>
 					<div class="new_boxs float">
-						<div class="logol"><img src="img/logos.png" class="img"/></div>
 						<div class="new_s">
 							<span class="new_left"><img src=<?= "'" . $news_data[0]['ThumbPic'] . "'"?> class="img"/></span>
 							<span class="new_right">
@@ -210,13 +210,14 @@ $company_state = json_encode($company_state, JSON_UNESCAPED_UNICODE);
 			</div>
 			<?php include('/footer.php'); ?>
 		<div class="width float">
-			<iframe src="footer.html" width="100%" height="80px" frameborder="0" scrolling="no"></iframe>
+			<iframe src="footer.html" width="100%" height="100px" frameborder="0" scrolling="no"></iframe>
 		</div>
 
 		</div>
 	</body>
 	<script src="js/jquery-2.1.1.min.js" type="text/javascript" charset="utf-8"></script>
 	<script src="js/unslider.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/main.js" type="text/javascript" charset="utf-8"></script>
 	<script type="text/javascript">
 		$(function() {
 			$('.sy').children('div').addClass('bgcolor')
@@ -234,6 +235,7 @@ $company_state = json_encode($company_state, JSON_UNESCAPED_UNICODE);
 				$('.staOne').children('ul').slideUp();
 				$(this).children('ul').slideToggle();
 			})
+			startsd();
 		})
 	</script>
 	<script>
@@ -241,7 +243,7 @@ $company_state = json_encode($company_state, JSON_UNESCAPED_UNICODE);
 		// for(var i=0; i< company_state.length; i++){
 		// 	console.log(company_state[i]);
 		// }
-		console.log(company_state)
+//		console.log(company_state)
 		
 	</script>
 
