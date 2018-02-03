@@ -662,3 +662,16 @@ footer p {
   right: 2%;
   bottom: 1%;
 }
+.hx {
+  float: left;
+  width: 100%;
+  height: 0.3rem;
+  background: #F7F7F7;
+}
+.hx div {
+  width: 96%;
+  height: 100%;
+  float: left;
+  background: #fff;
+  margin: 0 2%;
+}
