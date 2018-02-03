@@ -30,7 +30,7 @@ function cj(data) {
 		$('.new_boxs').append(sn);
 	});
 	for(var i = 0; i < $('.new_s').length; i++) {
-		$('.new_s').eq(i).find('a').attr('href', data[i].PageUrl);
+		$('.new_s').eq(i).find('a').attr('href', data[i].state_url);
 		$('.new_s').eq(i).children('.new_left').children('img').attr('src', data[i].ThumbPic);
 		$('.new_s').eq(i).children('.new_right').find('li').eq(0).children('a').html(data[i].Title);
 		$('.new_s').eq(i).children('.new_right').find('li').eq(1).children('a').html(data[i].BriefDescription);
