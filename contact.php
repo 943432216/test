@@ -8,7 +8,30 @@ include($site_root_path.'/inc/fun/verification_code.php');
 include($site_root_path.'/inc/lib/feedback/form_post.php');
 
 if ($_SERVER['REQUEST_METHOD']=='POST') {
-	var_dump($_POST);exit;
+	// var_dump($_POST);exit;
+	$Name = htmlentities($_POST['Name']);
+	$Email = htmlentities($_POST['Email']);
+	$Phone = htmlentities($_POST['Phone']);
+	$Message = htmlentities($_POST['Message']);
+	$VCode = strtoupper(trim(htmlentities($_POST['VCode'])));
+
+	var_dump($Message);exit;
+	if ($VCode!=$_SESSION[md5('feedback')] || $_SESSION[md5('feedback')]=='') {	//验证码错误
+		$_SESSION[md5('feedback')]='';
+		unset($_SESSION[md5('feedback')]);
+	} else {
+		$ret = $db->insert('feedback', array(
+			'Name'		=>	$Name,
+			'Email'		=>	$Email,
+			'Phone'		=>	$Phone,
+			'Subject'	=>	$Message,
+			'Ip'		=>	get_ip(),
+			'PostTime'	=>	$service_time
+			)
+		);
+		var_dump($ret);exit;
+	}
+
 }
 ?>
 <!DOCTYPE html>
