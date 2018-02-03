@@ -143,41 +143,41 @@ if ($_SERVER['REQUEST_METHOD']=='POST') {
 			</div>
 			<section class="float width float">
 				<div class="stc_title float width"><img src="img/title_contant.png" alt="" class="img" /></div>
-				<div class="contant_form">
-					<form action="<?=$_SERVER['SCRIPT_NAME']?>" method="post">
+				<form action="<?=$_SERVER['SCRIPT_NAME']?>" method="post">
+					<div class="contant_form">
 						<div class="form_bg">
-							<span>
-								<p>姓名：</p>
-								<b>*</b>
-								<input type="text" name="Name" id="Name" value="" />
-							</span>
-							<span>
-								<p>邮箱：</p>
-								<b>*</b>
-								<input type="text" name="Email" id="Email" value="" />
-							</span>
-							<span>
-								<p>手机：</p>
-								<b>*</b>
-								<input type="text" name="Phone" id="Phone" value="" />
-							</span>
-							<span>
-								<p>内容：</p>
-								<b>*</b>
-								<textarea name="" rows="5" cols="" id="Message" name="Message"></textarea>
-							</span>
-							<span>
-								<p class="yl">验证码：</p>
-								<input type="text" name="VCode" id="VCode" value="" />
-								<!--<p id="yt"></p>-->
-								<!-- <img src="img/yzm.png" alt=""  id="yt"/> -->
-								<?=verification_code('feedback');?>
-								<!--<a href="#" class="bsn">看不清？换一个</a>-->
-							</span>
-							<span>
-								<input type="submit" name="btn" id="btn" value="提交" />
-							</span>
-							<div class="form_logos"></div>
+								<span>
+									<p>姓名：</p>
+									<b>*</b>
+									<input type="text" name="Name" id="Name" value="" />
+								</span>
+								<span>
+									<p>邮箱：</p>
+									<b>*</b>
+									<input type="text" name="Email" id="Email" value="" />
+								</span>
+								<span>
+									<p>手机：</p>
+									<b>*</b>
+									<input type="text" name="Phone" id="Phone" value="" />
+								</span>
+								<span>
+									<p>内容：</p>
+									<b>*</b>
+									<textarea name="Message" rows="5" cols="" id="Message"></textarea>
+								</span>
+								<span>
+									<p class="yl">验证码：</p>
+									<input type="text" name="VCode" id="VCode" value="" />
+									<!--<p id="yt"></p>-->
+									<!-- <img src="img/yzm.png" alt=""  id="yt"/> -->
+									<?=verification_code('feedback');?>
+									<!--<a href="#" class="bsn">看不清？换一个</a>-->
+								</span>
+								<span>
+									<input type="submit"  id="btn" value="提交" />
+								</span>
+								<div class="form_logos"></div>
 						</div>
 					</form>
 				</div>

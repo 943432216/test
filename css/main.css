@@ -412,7 +412,7 @@ footer p {
   height: 0.8rem;
   line-height: 0.8rem;
 }
-#yt {
+.yt {
   float: left;
   background: #FFFF00;
   height: 0.82rem !important;
