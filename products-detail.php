@@ -1,3 +1,19 @@
+<?php  
+include('inc/site_config.php');
+include($site_root_path.'/inc/set/ext_var.php');
+include($site_root_path.'/inc/fun/mysql.php');
+include($site_root_path.'/inc/function.php');
+include($site_root_path.'/inc/common.php');
+
+$ProId = htmlentities($_GET['ProId']);
+$cate_nav = $db->get_all('product_category',"CateId in ('24','10','11','22')");
+$product = $db->get_one('product',"ProId='$ProId'");
+$CateId = $product['CateId'];
+$product_description=$db->get_one('product_description',"ProId='$ProId'",'Description');
+$ad_position = $db->get_one('product_category',"CateId='$CateId'",'Category');
+var_dump($ad_position);exit;
+//$pic_top = $db->get_one('ad',"AId='6");
+?>
 <!DOCTYPE html>
 <html>
 
@@ -127,8 +143,8 @@
 						</div>
 					</div>
 					<div class="product_name">
-						<h5>心宝丸40丸/瓶</h5>
-						<p>温补心肾，益气助阳，活血通脉</p>
+						<h5><?=$product['Name']?></h5>
+						<p><?=$product['BriefDescription']?></p>
 					</div>
 				</div>
 			</div>
@@ -139,44 +155,8 @@
 					<div class="float sd">
 						<div class="det"><img src="img/logod.png" class="img"/></div>
 						<pre style="margin-top: 0px; margin-bottom: 0px; padding: 0px; border: none; font-size: 14px; font-family: arial, tahoma; white-space: pre-wrap; word-wrap: break-word; word-break: normal; line-height: 1.7; color: rgb(112, 112, 112);">
-龟鹿补肾片说明书
-请仔细阅读说明书并按说明使用或在药师指导下购买和使用。
-
-【药品名称】
-通用名称：龟鹿补肾片
-汉语拼音：Guilu Bushen Pian
-【成份】菟丝子（炒）、淫羊藿（蒸）、续断（蒸）、锁阳（蒸）、狗脊（蒸）、酸枣仁（炒）、制何首乌、炙甘草、陈皮（蒸）、鹿角胶（炒）、熟地黄、龟甲胶（炒）、金樱子（蒸）、蜜黄芪、山药（炒）、覆盆子（蒸）。辅料为淀粉、硬脂酸镁。
-【性状】本品为薄膜衣片，除去包衣后显棕褐色；味微甘。	
-【功能主治】壮筋骨，益气血，补肾。用于身体虚弱，精神疲乏，腰腿酸软，头晕目眩，夜多小便，健忘失眠。
-【规格】每片重0.43克
-【用法用量】口服，一次2～4片，一日2次。
-【不良反应】尚不明确。
-<strong style="margin: 0px; padding: 0px; border: none;">【禁忌】孕妇忌服，儿童禁用。
-【注意事项】
-1．忌辛辣食物。
-2．凡脾胃虚弱，呕吐泄泻，腹胀便溏、咳嗽痰多者慎用。
-3．感冒病人不宜服用。
-4．本品宜饭前服用。
-5．服药二周或服药期间症状无明显改善，或症状加重，或出现新的严重症状，应立即停药并去医院就诊。
-6．对本品过敏者禁用，过敏体质者慎用。
-7．本品性状发生改变时禁止使用。
-8．请将本品放在儿童不能接触的地方。
-9．如正在使用其他药品，使用本品前请咨询医师或药师。</strong>
-【药物相互作用】如与其他药物同时使用可能会发生药物相互作用，详情请咨询医师或药师。
-【贮藏】密封。
-【包装】铝塑包装。每盒60片。
-【有效期】24个月
-【执行标准】国家食品药品监督管理局标准YBZ05732008
-【批准文号】国药准字Z20080217
-【说明书修订日期】2017年06月21日
-【生产企业】
-企业名称：广东心宝药业科技有限公司
-生产地址：广州高新技术产业开发区伴河路6号
-邮政编码：510990
-电话号码：020-37924226
-（全国咨询电话号码：4009934288）
-传真号码：（020）37924368
-如有问题可与生产企业联系。</pre>
+						<?=$product_description['Description']?>
+						</pre>
 					</div>
 				</div>
 			</section>

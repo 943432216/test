@@ -35,7 +35,7 @@ include('../../inc/manage/header.php');
 	</tr>
 	<?php
 	$ad_row_count=$i=0;
-	$rs=$db->query('select PageName from ad group by PageName order by AId asc');
+	$rs=$db->query('select PageName from ad group by PageName');
 	while($row=mysql_fetch_assoc($rs)){
 	?>
 	<tr align="center">
