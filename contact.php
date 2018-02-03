@@ -1,3 +1,16 @@
+<?php 
+include('inc/site_config.php');
+include($site_root_path.'/inc/set/ext_var.php');
+include($site_root_path.'/inc/fun/mysql.php');
+include($site_root_path.'/inc/function.php');
+include($site_root_path.'/inc/common.php'); 
+include($site_root_path.'/inc/fun/verification_code.php');
+include($site_root_path.'/inc/lib/feedback/form_post.php');
+
+if ($_SERVER['REQUEST_METHOD']=='POST') {
+	var_dump($_POST);exit;
+}
+?>
 <!DOCTYPE html>
 <html>
 
@@ -108,39 +121,42 @@
 			<section class="float width float">
 				<div class="stc_title float width"><img src="img/title_contant.png" alt="" class="img" /></div>
 				<div class="contant_form">
-					<div class="form_bg">
-						<span>
-							<p>姓名：</p>
-							<b>*</b>
-							<input type="text" name="usename" id="usename" value="" />
-						</span>
-						<span>
-							<p>邮箱：</p>
-							<b>*</b>
-							<input type="text" name="usename" id="em" value="" />
-						</span>
-						<span>
-							<p>手机：</p>
-							<b>*</b>
-							<input type="text" name="usename" id="zhuti" value="" />
-						</span>
-						<span>
-							<p>内容：</p>
-							<b>*</b>
-							<textarea name="" rows="5" cols="" id="msg"></textarea>
-						</span>
-						<span>
-							<p class="yl">验证码：</p>
-							<input type="text" name="usename" id="ys" value="" />
-							<!--<p id="yt"></p>-->
-							<img src="img/yzm.png" alt=""  id="yt"/>
-							<!--<a href="#" class="bsn">看不清？换一个</a>-->
-						</span>
-						<span>
-							<input type="button" name="" id="btn" value="提交" />
-						</span>
-						<div class="form_logos"></div>
-					</div>
+					<form action="<?=$_SERVER['SCRIPT_NAME']?>" method="post">
+						<div class="form_bg">
+							<span>
+								<p>姓名：</p>
+								<b>*</b>
+								<input type="text" name="usename" id="usename" value="" />
+							</span>
+							<span>
+								<p>邮箱：</p>
+								<b>*</b>
+								<input type="text" name="usename" id="em" value="" />
+							</span>
+							<span>
+								<p>手机：</p>
+								<b>*</b>
+								<input type="text" name="usename" id="zhuti" value="" />
+							</span>
+							<span>
+								<p>内容：</p>
+								<b>*</b>
+								<textarea name="" rows="5" cols="" id="msg"></textarea>
+							</span>
+							<span>
+								<p class="yl">验证码：</p>
+								<input type="text" name="usename" id="ys" value="" />
+								<!--<p id="yt"></p>-->
+								<!-- <img src="img/yzm.png" alt=""  id="yt"/> -->
+								<?=verification_code('feedback');?>
+								<!--<a href="#" class="bsn">看不清？换一个</a>-->
+							</span>
+							<span>
+								<input type="button" name="" id="btn" value="提交" />
+							</span>
+							<div class="form_logos"></div>
+						</div>
+					</form>
 				</div>
 				<div class="stc_title float width"><img src="img/title_contant2.png" alt="" class="img" /></div>
 				<div class="contant_map">
