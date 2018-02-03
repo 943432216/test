@@ -7,6 +7,11 @@ include($site_root_path.'/inc/common.php');
 
 $ProId = htmlentities($_GET['ProId']);
 $cate_nav = $db->get_all('product_category',"CateId in ('24','10','11','22')");
+list($bushen,$pdpian,$pdjiao,$xbw) = $cate_nav;
+$cate_nav_new[] = $xbw;
+$cate_nav_new[] = $bushen;
+$cate_nav_new[] = $pdpian;
+$cate_nav_new[] = $pdjiao;
 $product = $db->get_one('product',"ProId='$ProId'");
 $CateId = $product['CateId'];
 $product_description=$db->get_one('product_description',"ProId='$ProId'",'Description');
@@ -122,10 +127,13 @@ $banner=$db->get_one('ad',"AdPosition='$ad_position'");
 			<div class="banner float width">
 				<div class="banner_navs">
 					<ul>
-						<li><a href="product_01.html">心宝丸</a></li>
-						<li><a href="product_02.html">龟鹿补肾片</a></li>
-						<li><a href="product_03.html">蒲地蓝消炎片</a></li>
-						<li><a href="product_04.html">蒲地蓝消炎胶囊</a></li>
+						<?php  
+							foreach ($cate_nav_new as $v) {
+						?>
+						<li>
+							<a href="<?='products.php?CateId=' . $v['CateId']?>"><?=$v['Category']?></a>
+						</li>
+						<?php } ?>
 					</ul>
 				</div>
 				<div class="banner_box">
