@@ -6,9 +6,6 @@ include($site_root_path.'/inc/function.php');
 include($site_root_path.'/inc/common.php');
 include($site_root_path.'/inc/lib/product/list_lang_0.php');
 
-if ($_GET['CateId'] == '') {
-	$_GET['CateId'] == '24';
-}
 
 $cate_nav = $db->get_all('product_category',"CateId in ('24','10','11','22')");
 list($bushen,$pdpian,$pdjiao,$xbw) = $cate_nav;
