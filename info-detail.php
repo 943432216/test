@@ -117,7 +117,7 @@ $banner=$db->get_one('ad',"AId='5'");
 				<h1 class="header_con">公司动态</h1>
 				<div class="header_nav"></div>
 			</header>
-			<section class="float width">
+			<section class="float width ddd">
 				<div class="detail_box float width">
 					<?=$info_detail;?>
 				</div>
@@ -148,6 +148,27 @@ $banner=$db->get_one('ad',"AId='5'");
 				$('.staOne').children('ul').slideUp();
 				$(this).children('ul').slideToggle();
 			})
+			$('.ddd').find('p').removeAttr('style');
+			$('.ddd').find('span').removeAttr('style');
+			$('.ddd').find('div').removeAttr('style');
+			$('.ddd').find('span').css('width','100%')
+			$('.ddd').find('strong').removeAttr('style');
+			$('.ddd').find('img').removeAttr('style');
+			$('.ddd').find('img').addClass('img');
+//			$('.detail_box').children(':first').addClass('ts');
+			$('section').removeAttr('style');
+			$('section').css('padding-bottom','0');
+			console.log($('section').css('padding-bottom'))
+			var dsxs=null;
+			var dsx=$('.ddd').find('section').find('p').each(function(){
+				dsxs=trim($(this).html());
+				console.log(dsxs)
+				if(dsxs=='nbps;'){
+					$(this).remove();
+				}
+			});
+			
+			
 		})
 	</script>
 
