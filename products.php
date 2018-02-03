@@ -1,3 +1,16 @@
+<?php
+include('inc/site_config.php');
+include($site_root_path.'/inc/set/ext_var.php');
+include($site_root_path.'/inc/fun/mysql.php');
+include($site_root_path.'/inc/function.php');
+include($site_root_path.'/inc/common.php');
+include($site_root_path.'/inc/lib/product/list_lang_0.php');
+
+$cate_nav = $db->get_all('product_category',"CateId in ('24','10','11','22')");
+$pageName='pro';
+$banner=$db->get_one('ad',"AId='6'");
+//var_dump($product_row);exit;
+?>
 <!DOCTYPE html>
 <html>
 
@@ -109,18 +122,13 @@
 			<div class="banner float width">
 				<div class="banner_navs">
 					<ul>
+						<?php  
+							foreach ($cate_nav as $v) {
+						?>
 						<li>
-							<a href="product_01.html">心宝丸</a>
+							<a href="<?='products.php?CateId=' . $v['CateId']?>"><?=$v['Category']?></a>
 						</li>
-						<li>
-							<a href="product_02.html">龟鹿补肾片</a>
-						</li>
-						<li>
-							<a href="product_03.html">蒲地蓝消炎片</a>
-						</li>
-						<li>
-							<a href="product_04.html">蒲地蓝消炎胶囊</a>
-						</li>
+						<?php } ?>
 					</ul>
 				</div>
 			</div>
@@ -130,18 +138,18 @@
 			<section class="float width">
 				<div class="stc_title"><img src="img/title_product_01.png" alt="" class="img" /></div>
 				<div class="_con">
+					<?php 
+					for($i=0,$len=count($product_row);$i<$len;$i++){
+						$item=$product_row[$i];
+						$url=get_url('product',$item);
+					?>
 					<div class="product">
-						<span><a href="porder_detail.html"><img src="img/product/product_n1.jpg" class="img"/></a></span>
+						<span><a href="<?=$url?>"><img src="<?=$item['PicPath_0']?>" class="img"/></a></span>
 						<p>
-							<a href="porder_detail.html">心宝丸20丸</a>
+							<a href="<?=$url?>"><?=$item['Name']?></a>
 						</p>
 					</div>
-					<div class="product">
-						<span><a href="porder_detail.html"><img src="img/product/product_n2.jpg" class="img"/></a></span>
-						<p>
-							<a href="porder_detail.html">心宝丸40丸</a>
-						</p>
-					</div>
+					<?php }?>
 				</div>
 			</section>
 			<div class="blogroll">
