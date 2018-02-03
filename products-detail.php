@@ -11,7 +11,9 @@ $product = $db->get_one('product',"ProId='$ProId'");
 $CateId = $product['CateId'];
 $product_description=$db->get_one('product_description',"ProId='$ProId'",'Description');
 $ad_position = $db->get_one('product_category',"CateId='$CateId'",'Category');
-var_dump($ad_position);exit;
+$ad_position = $ad_position['Category'];
+$banner=$db->get_one('ad',"AdPosition='$ad_position'");
+//var_dump($banner);exit;
 //$pic_top = $db->get_one('ad',"AId='6");
 ?>
 <!DOCTYPE html>
@@ -130,15 +132,14 @@ var_dump($ad_position);exit;
 					<div class="banner_ts">
 						<div id="marquee" style="width: 100%;">
 							<ul>
+								<?php  
+								for($i=0;$i<5;$i++){
+									if(!is_file($site_root_path.$banner['PicPath_'.$i]))continue;
+								?>
 								<li>
-									<a href="#"><img src="img/banner.jpg" class="img"></a>
+									<a href="<?=get_url('product',$product_row[$i])?>"><img src="<?=$banner['PicPath_'.$i]?>" class="img"></a>
 								</li>
-								<li>
-									<a href="#"><img src="img/banner_01.jpg" class="img"></a>
-								</li>
-								<li>
-									<a href="#"><img src="img/banner_02.jpg" class="img"></a>
-								</li>
+								<?php }?>
 							</ul>
 						</div>
 					</div>

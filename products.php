@@ -7,9 +7,14 @@ include($site_root_path.'/inc/common.php');
 include($site_root_path.'/inc/lib/product/list_lang_0.php');
 
 $cate_nav = $db->get_all('product_category',"CateId in ('24','10','11','22')");
+list($bushen,$pdpian,$pdjiao,$xbw) = $cate_nav;
+$cate_nav_new[] = $xbw;
+$cate_nav_new[] = $bushen;
+$cate_nav_new[] = $pdpian;
+$cate_nav_new[] = $pdjiao;
 $pageName='pro';
 $banner=$db->get_one('ad',"AId='6'");
-//var_dump($product_row);exit;
+//var_dump($cate_nav_new);exit;
 ?>
 <!DOCTYPE html>
 <html>
@@ -123,7 +128,7 @@ $banner=$db->get_one('ad',"AId='6'");
 				<div class="banner_navs">
 					<ul>
 						<?php  
-							foreach ($cate_nav as $v) {
+							foreach ($cate_nav_new as $v) {
 						?>
 						<li>
 							<a href="<?='products.php?CateId=' . $v['CateId']?>"><?=$v['Category']?></a>
