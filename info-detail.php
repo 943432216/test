@@ -118,6 +118,7 @@ $banner=$db->get_one('ad',"AId='5'");
 				<div class="header_nav"></div>
 			</header>
 			<section class="float width ddd">
+				<div class="float width logos"><img src="img/logol.png" class="img"/></div>
 				<div class="detail_box float width">
 					<?=$info_detail;?>
 				</div>
