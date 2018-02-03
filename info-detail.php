@@ -21,6 +21,7 @@ $banner=$db->get_one('ad',"AId='5'");
 		<title>心宝药业</title>
 		<link rel="stylesheet" type="text/css" href="css/main.css" />
 		<link rel="stylesheet" type="text/css" href="css/dome1.css" />
+		<link rel="stylesheet" type="text/css" href="css/css.css"/>
 		<script type="text/javascript">
 			(function() {
 				var html = document.documentElement;
