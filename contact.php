@@ -15,12 +15,12 @@ if ($_SERVER['REQUEST_METHOD']=='POST') {
 	$Message = htmlentities($_POST['Message']);
 	$VCode = strtoupper(trim(htmlentities($_POST['VCode'])));
 
-	var_dump($Message);exit;
+	//var_dump($Message);exit;
 	if ($VCode!=$_SESSION[md5('feedback')] || $_SESSION[md5('feedback')]=='') {	//验证码错误
 		$_SESSION[md5('feedback')]='';
 		unset($_SESSION[md5('feedback')]);
 	} else {
-		$ret = $db->insert('feedback', array(
+		$db->insert('feedback', array(
 			'Name'		=>	$Name,
 			'Email'		=>	$Email,
 			'Phone'		=>	$Phone,
@@ -29,7 +29,7 @@ if ($_SERVER['REQUEST_METHOD']=='POST') {
 			'PostTime'	=>	$service_time
 			)
 		);
-		var_dump($ret);exit;
+		//var_dump($ret);exit;
 	}
 
 }
