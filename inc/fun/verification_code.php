@@ -35,7 +35,7 @@ function verification_code($code_name='ly200', $code_length=0, $code_char=''){
 	!$code_length && $code_length=$verification_code['length'];
 	!$code_char && $code_char=$verification_code['char'];
 	
-	return "<a href='javascript:void(0);' onclick='this.blur(); obj=document.getElementById(\"$verification_code_id\"); obj.src=obj.src+Math.random(); return true;'><img src='/inc/fun/verification_code.php?code_name=$code_name&code_length=$code_length&code_char=$code_char&code_creat=1&rand_code=".rand_code()."' align='absmiddle' id='$verification_code_id'></a>";
+	return "<a href='javascript:void(0);' onclick='this.blur(); obj=document.getElementById(\"$verification_code_id\"); obj.src=obj.src+Math.random(); return true;'><img src='/inc/fun/verification_code.php?code_name=$code_name&code_length=$code_length&code_char=$code_char&code_creat=1&rand_code=".rand_code()."' align='absmiddle' id='$verification_code_id' class='yt'></a>";
 }
 
 function verification_code_creat($code_name, $code_length, $code_char){
