@@ -27,6 +27,9 @@ $company_state = json_encode($company_state, JSON_UNESCAPED_UNICODE);
 				html.style.fontSize = w / 15 + 'px';
 			})();
 		</script>
+		<script type="text/javascript">
+			var company_state = <?=$company_state?>;
+		</script>
 	</head>
 
 	<body>
@@ -154,7 +157,7 @@ $company_state = json_encode($company_state, JSON_UNESCAPED_UNICODE);
 				<div class="_con">
 					<div class="logol"><img src="img/logos.png" class="img"/></div>
 					<div class="new_boxs float">
-						<div class="new_s">
+						<!--<div class="new_s">
 							<span class="new_left"><img src=<?= "'" . $news_data[0]['ThumbPic'] . "'"?> class="img"/></span>
 							<span class="new_right">
 								<ul>
@@ -198,7 +201,7 @@ $company_state = json_encode($company_state, JSON_UNESCAPED_UNICODE);
 									<li><a href="#" class="title">心宝药业获2017年度广东省工程技术研究中心认定</a></li>
 								</ul>
 							</span>
-						</div>
+						</div>-->
 						
 					</div>
 				</div>
@@ -235,16 +238,10 @@ $company_state = json_encode($company_state, JSON_UNESCAPED_UNICODE);
 				$('.staOne').children('ul').slideUp();
 				$(this).children('ul').slideToggle();
 			})
-			startsd();
+			 cj(company_state);
+			startsd()
 		})
 	</script>
-	<script>
-		var company_state = <?=$company_state?>;
-		// for(var i=0; i< company_state.length; i++){
-		// 	console.log(company_state[i]);
-		// }
-//		console.log(company_state)
-		
-	</script>
+	
 
 </html>

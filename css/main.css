@@ -452,17 +452,18 @@ footer p {
 }
 .logol {
   position: absolute;
-  right: 0.3rem;
+  right: 0.6rem;
   bottom: 0.4rem;
   width: 2.44rem;
   height: 3.44rem;
   z-index: 999999;
 }
 .new_left {
-  width: 24%;
-  height: 100%;
   float: left;
   display: block;
+  overflow: hidden;
+  width: 24%;
+  height: 2rem;
 }
 .new_right {
   width: 76%;
@@ -498,12 +499,17 @@ footer p {
   font-size: 0.52rem;
   line-height: 150%;
   font-weight: 400;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 .new_right li:nth-of-type(2) a {
   color: #999999;
   font-size: 0.36rem;
-  padding-left: 7%;
+  padding-left: 8%;
   letter-spacing: 0.04rem;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 .new_bt {
   background: #f7f7f7;
@@ -519,7 +525,7 @@ footer p {
   color: #b30003;
   text-align: center;
   text-decoration: underline;
-  background: url(../img/more.png) no-repeat right center #ffffff;
+  background: url(../img/more.png) no-repeat 98% center #ffffff;
   background-size: 0.28rem 0.34rem;
 }
 .moreNew a {

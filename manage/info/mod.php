@@ -68,6 +68,7 @@ if($_POST){
 		$dir_name = date('Y-m-d');
 		$dir = $r_path . '/u_file/thumb/' . $dir_name;
 		if (!file_exists($dir)) {
+			//var_dump($dir);exit;
 			mkdir($dir);
 		}
 		$f_name_arr = explode('.', $_FILES['thumb']['name']);
