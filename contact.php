@@ -126,33 +126,33 @@ if ($_SERVER['REQUEST_METHOD']=='POST') {
 							<span>
 								<p>姓名：</p>
 								<b>*</b>
-								<input type="text" name="usename" id="usename" value="" />
+								<input type="text" name="Name" id="Name" value="" />
 							</span>
 							<span>
 								<p>邮箱：</p>
 								<b>*</b>
-								<input type="text" name="usename" id="em" value="" />
+								<input type="text" name="Email" id="Email" value="" />
 							</span>
 							<span>
 								<p>手机：</p>
 								<b>*</b>
-								<input type="text" name="usename" id="zhuti" value="" />
+								<input type="text" name="Phone" id="Phone" value="" />
 							</span>
 							<span>
 								<p>内容：</p>
 								<b>*</b>
-								<textarea name="" rows="5" cols="" id="msg"></textarea>
+								<textarea name="" rows="5" cols="" id="Message" name="Message"></textarea>
 							</span>
 							<span>
 								<p class="yl">验证码：</p>
-								<input type="text" name="usename" id="ys" value="" />
+								<input type="text" name="VCode" id="VCode" value="" />
 								<!--<p id="yt"></p>-->
 								<!-- <img src="img/yzm.png" alt=""  id="yt"/> -->
 								<?=verification_code('feedback');?>
 								<!--<a href="#" class="bsn">看不清？换一个</a>-->
 							</span>
 							<span>
-								<input type="button" name="" id="btn" value="提交" />
+								<input type="submit" name="btn" id="btn" value="提交" />
 							</span>
 							<div class="form_logos"></div>
 						</div>

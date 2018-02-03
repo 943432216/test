@@ -344,7 +344,7 @@ footer p {
   font-size: 0.28rem;
   color: #B30003;
 }
-.contant_form span input[type='button'] {
+.contant_form span input[type='submit'] {
   width: 1.6rem;
   height: 0.8rem;
   text-align: center;
@@ -406,7 +406,7 @@ footer p {
 .yl {
   width: 2rem !important;
 }
-#ys {
+#VCode {
   width: 2.7rem !important;
   display: block;
   height: 0.8rem;
