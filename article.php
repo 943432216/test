@@ -119,22 +119,12 @@ if($GroupId==1){
 	</body>
 	<script src="js/jquery-2.1.1.min.js" type="text/javascript" charset="utf-8"></script>
 	<script src="js/unslider.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/main.js" type="text/javascript" charset="utf-8"></script>
 	<script type="text/javascript">
 		$(function() {
-			$('.staOne').children('ul').slideUp();
-			$('#t1').children('ul').slideDown();
-			$('#t1 div').addClass('bgcolor');
-			$('.banner_nav').find('li').children('a').eq(0).addClass('bor_bn')
-			$('#t1').find('li').eq(0).children('a').addClass('color');
-			$('.header_nav').click(function() {
-				$('.i_ul').toggle(500);
-			})
-			$('.staOne').click(function() {
-				$('.staOne').children('ul').slideUp();
-				$(this).children('ul').slideToggle();
-			})
 			$('._con').find('*').removeAttr('style');
 			$('._con').find('img').addClass('img');
+			linkages('products','#t1');
 		})
 	</script>
 

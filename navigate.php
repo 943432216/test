@@ -1,5 +1,5 @@
 <ul>
-	<li>
+	<li id="t0">
 		<div class="width float">
 			<a href="index.php">首页</a>
 		</div>

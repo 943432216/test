@@ -4,18 +4,8 @@ include($site_root_path.'/inc/set/ext_var.php');
 include($site_root_path.'/inc/fun/mysql.php');
 include($site_root_path.'/inc/function.php');
 include($site_root_path.'/inc/common.php');
-include($site_root_path.'/inc/lib/product/list_lang_0.php');
 
-
-$cate_nav = $db->get_all('product_category',"CateId in ('24','10','11','22')");
-list($bushen,$pdpian,$pdjiao,$xbw) = $cate_nav;
-$cate_nav_new[] = $xbw;
-$cate_nav_new[] = $bushen;
-$cate_nav_new[] = $pdpian;
-$cate_nav_new[] = $pdjiao;
-$pageName='pro';
-$banner=$db->get_one('ad',"AId='6'");
-//var_dump($cate_nav_new);exit;
+$content=$db->get_one('info2_contents',"InfoId='29'");
 ?>
 <!DOCTYPE html>
 <html>
@@ -26,7 +16,6 @@ $banner=$db->get_one('ad',"AId='6'");
 		<title>心宝药业</title>
 		<link rel="stylesheet" type="text/css" href="css/main.css" />
 		<link rel="stylesheet" type="text/css" href="css/dome1.css" />
-		<!--<link rel="stylesheet" type="text/css" href="css/css.css" />-->
 		<script type="text/javascript">
 			(function() {
 				var html = document.documentElement;
@@ -43,40 +32,16 @@ $banner=$db->get_one('ad',"AId='6'");
 			</div>
 			<header>
 				<div class="header_logo"></div>
-				<h1 class="header_con">产品中心</h1>
+				<h1 class="header_con">公司动态</h1>
 				<div class="header_nav"></div>
 			</header>
-			<div class="banner float width">
-				<div class="banner_navs">
-					<ul>
-						<?php  
-							foreach ($cate_nav_new as $v) {
-						?>
-						<li>
-							<a href="<?='products.php?CateId=' . $v['CateId']?>"><?=$v['Category']?></a>
-						</li>
-						<?php } ?>
-					</ul>
-				</div>
-			</div>
-			<div class="banners float width">
-				<img src="img/product.jpg" class="img" />
+			
+			<div class="detail_box float width">
+				<div class="logob"></div>			
 			</div>
 			<section class="float width">
-				<div class="stc_title"><img src="img/title_product_01.png" alt="" class="img" /></div>
-				<div class="_con">
-					<?php 
-					for($i=0,$len=count($product_row);$i<$len;$i++){
-						$item=$product_row[$i];
-						$url=get_url('product',$item);
-					?>
-					<div class="product">
-						<span><a href="<?=$url?>"><img src="<?=$item['PicPath_0']?>" class="img"/></a></span>
-						<p>
-							<a href="<?=$url?>"><?=$item['Name']?></a>
-						</p>
-					</div>
-					<?php }?>
+				<div class="detail_box float width">
+					<?=$db->get_value('info_contents', "InfoId='208'", 'Contents');?>
 				</div>
 			</section>
 			<div class="blogroll">
@@ -95,10 +60,16 @@ $banner=$db->get_one('ad',"AId='6'");
 	</body>
 	<script src="js/jquery-2.1.1.min.js" type="text/javascript" charset="utf-8"></script>
 	<script src="js/unslider.min.js" type="text/javascript" charset="utf-8"></script>
-	<script src="js/main.js" type="text/javascript" charset="utf-8"></script>
 	<script type="text/javascript">
 		$(function() {
-			linkages('products','#t2');
+			$('.staOne').children('ul').slideUp();
+			$('.header_nav').click(function() {
+				$('.i_ul').toggle(500);
+			})
+			$('.staOne').click(function() {
+				$('.staOne').children('ul').slideUp();
+				$(this).children('ul').slideToggle();
+			})
 		})
 	</script>
 

@@ -50,6 +50,9 @@ $fresh_state = json_encode($fresh_state, JSON_UNESCAPED_UNICODE);
 				html.style.fontSize = w / 15 + 'px';
 			})();
 		</script>
+		<script type="text/javascript">
+			var fresh_state = <?=$fresh_state?>
+		</script>
 	</head>
 
 	<body>
@@ -87,7 +90,7 @@ $fresh_state = json_encode($fresh_state, JSON_UNESCAPED_UNICODE);
 				<div class="_con">
 					<div class="logol"><img src="img/logos.png" class="img"/></div>
 					<div class="new_boxs float">
-						<div class="new_s">
+						<!--<div class="new_s">
 							<span class="new_left"><img src="img/50f750d822.jpg" class="img"/></span>
 							<span class="new_right">
 								<ul>
@@ -131,7 +134,7 @@ $fresh_state = json_encode($fresh_state, JSON_UNESCAPED_UNICODE);
 									<li><a href="#" class="title">心宝药业获2017年度广东省工程技术研究中心认定</a></li>
 								</ul>
 							</span>
-						</div>
+						</div>-->
 					</div>
 				</div>
 			</section>
@@ -187,19 +190,9 @@ $fresh_state = json_encode($fresh_state, JSON_UNESCAPED_UNICODE);
 	<script src="js/main.js" type="text/javascript" charset="utf-8"></script>
 	<script type="text/javascript">
 		$(function() {
-			$('.staOne').children('ul').slideUp();
-			$('#t4').children('ul').slideDown();
-			$('#t4 div').addClass('bgcolor');
-			$('.banner_nav').find('li').children('a').eq(0).addClass('bor_bn')
-			$('#t4').find('li').eq(0).children('a').addClass('color');
-			$('.header_nav').click(function() {
-				$('.i_ul').toggle(500);
-			})
-			$('.staOne').click(function() {
-				$('.staOne').children('ul').slideUp();
-				$(this).children('ul').slideToggle();
-			})
-			startsd()
+			linkages('product','#t4');
+			cj(fresh_state);
+			startsd();
 		})
 	</script>
 
