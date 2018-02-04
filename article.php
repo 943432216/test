@@ -10,6 +10,32 @@ if(!isset($article_row)){
 	$article_row=$db->get_one('article',"AId='$AId'");
 	$GroupId=(int)$article_row['GroupId'];
 }
+switch ($_GET['AId']) {
+	case '3': 
+		$pic_name = 'title_about_01.png'; 
+		$t_title  = '公司简介';
+		break;
+	case '6': 
+		$pic_name = 'title_about_02.png'; 
+		$t_title  = '发展历程';
+		break;
+	case '7': 
+		$pic_name = 'title_about_03.png'; 
+		$t_title  = '企业文化';
+		break;
+	case '15': 
+		$pic_name = 'title_about_04.png'; 
+		$t_title  = '企业荣誉';
+		break;
+	case '4': 
+		$pic_name = 'title_about_05.png'; 
+		$t_title  = '董事长致词';
+		break;	
+	default:  
+		$pic_name = 'title_about_01.png'; 
+		$t_title  = '公司简介';
+		break;
+}
 $group_txt=array(
 	1=>	array('A','bout us','关于心宝'),
 	2=>	array('C','ontent us','联系心宝'),
@@ -47,7 +73,7 @@ if($GroupId==1){
 			</div>
 			<header>
 				<div class="header_logo"></div>
-				<h1 class="header_con">关于心宝</h1>
+				<h1 class="header_con"><?=$t_title?></h1>
 				<div class="header_nav"></div>
 			</header>
 			<div class="banner float width">
@@ -58,12 +84,22 @@ if($GroupId==1){
 						<?php }?>
 					</ul>
 				</div>
-				<div class="banners"></div>
+				<?php
+			    for($i=0;$i<5;$i++){
+					if(!is_file($site_root_path.$banner['PicPath_'.$i]))continue;
+				?>
+				<div class="banners" style="background:url(<?=$banner['PicPath_'.$i]?>) no-repeat top center;<?=$i==0?'':'display:none;'?>"></div>
+				<?php }?>
 			</div>
 			<section class="float width b1">
-				<div class="stc_title"><img src="img/title_about_01.png" alt=""  class="img"/></div>
+				<div class="stc_title"><img src="img/<?=$pic_name?>" alt=""  class="img"/></div>
 				<div class="_con">
-					<?=$article_row['Contents']?>					
+					<?php if ($_GET['AId'] == '4') {?>
+						<img src="img/spend.png" alt="董事长致辞" class="img tcs"/>
+					<?php } else {
+						echo $article_row['Contents'];
+					}
+					?>					
 				</div>
 			</section>
 			
