@@ -7,6 +7,7 @@ include($site_root_path.'/inc/common.php');
 
 $banner = $db->get_one('ad',"AId='7'");
 $CateId = $_GET['CateId'];
+$cur_cate = $db->get_one('info2_category',"CateId='$CateId'");
 if ($CateId == 9) {
 	$xs_state = $db->get_all('info2', 'CateId=9', 'InfoId,ThumbPic,Title,BriefDescription', 'InfoId desc limit 20');
 } elseif ($CateId == 10) {
@@ -136,8 +137,7 @@ switch ($_GET['CateId']) {
 			<section class="float width">
 				<div class="stc_title"><img src="img/<?=$pic_name?>" alt=""  class="img"/></div>
 				<div class="_con">
-					<span class="company_top float width"><img src="img/1d6139b07a.jpg" class="img"/></span>
-					<span class="company_bn float">
+					<span class="company_bn float" style="font-size: 13px;">
 						<?=$db->get_value('info2_category_description', "CateId='{$cur_cate['CateId']}'", 'Description');?>
 					</span>
 				</div>
