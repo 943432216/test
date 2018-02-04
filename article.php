@@ -97,6 +97,8 @@ if($GroupId==1){
 				$('.staOne').children('ul').slideUp();
 				$(this).children('ul').slideToggle();
 			})
+			$('._con').find('*').removeAttr('style');
+			$('._con').find('img').addClass('img');
 		})
 	</script>
 
