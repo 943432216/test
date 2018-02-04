@@ -95,28 +95,29 @@ $banner=$db->get_one('ad',"AId='6'");
 	</body>
 	<script src="js/jquery-2.1.1.min.js" type="text/javascript" charset="utf-8"></script>
 	<script src="js/unslider.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/main.js" type="text/javascript" charset="utf-8"></script>
 	<script type="text/javascript">
 		$(function() {
-			var  urs=window.location.href;
-			var ds=null;
-			urs=urs.split('=')[1];
-//			console.log(urs);
-			if(urs==24){ds=0;} 
-			if(urs==10){ds=1;}
-			if(urs==11){ds=2;} 
-			if(urs==22){ds=3;}  
-			$('.staOne').children('ul').slideUp();
-			$('#t2').children('ul').slideDown();
-			$('#t2 div').addClass('bgcolor');
-			$('.banner_navs').find('li').children('a').eq(ds).addClass('bor_bn')
-			$('#t2').find('li').eq(ds).children('a').addClass('color');
-			$('.header_nav').click(function() {
-				$('.i_ul').toggle(500);
-			})
-			$('.staOne').click(function() {
-				$('.staOne').children('ul').slideUp();
-				$(this).children('ul').slideToggle();
-			})
+//			var  urs=window.location.href;
+//			var ds=null;
+//			urs=urs.split('=')[1];
+//			if(urs==24){ds=0;} 
+//			if(urs==10){ds=1;}
+//			if(urs==11){ds=2;} 
+//			if(urs==22){ds=3;}  
+//			$('.staOne').children('ul').slideUp();
+//			$('#t2').children('ul').slideDown();
+//			$('#t2 div').addClass('bgcolor');
+//			$('.banner_navs').find('li').children('a').eq(ds).addClass('bor_bn')
+//			$('#t2').find('li').eq(ds).children('a').addClass('color');
+//			$('.header_nav').click(function() {
+//				$('.i_ul').toggle(500);
+//			})
+//			$('.staOne').click(function() {
+//				$('.staOne').children('ul').slideUp();
+//				$(this).children('ul').slideToggle();
+//			})
+			linkages('products','#t2');
 		})
 	</script>
 

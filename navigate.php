@@ -1,9 +1,11 @@
 <ul>
-	<li style="background: #B60005;">
-		<a href="index.php">首页</a>
+	<li>
+		<div class="width float">
+			<a href="index.php">首页</a>
+		</div>
 	</li>
-	<li class="staOne">
-		<a href="javascript:;">关于心宝</a>
+	<li class="staOne" id="t1">
+		<div class="width float"><a href="javascript:;">关于心宝</a></div>
 		<ul class="i_uls">
 			<?php
 			if(!empty($art_group[1])){
@@ -15,8 +17,8 @@
 			<?php }}?>
 		</ul>
 	</li>
-	<li class="staOne">
-		<a href="javascript:;">产品中心</a>
+	<li class="staOne" id="t2">
+		<div class="width float"><a href="javascript:;">产品中心</a></div>
 		<ul class="i_uls">
 			<?php
 			if(!empty($product_cate)){
@@ -28,8 +30,8 @@
 			<?php }}?>
 		</ul>
 	</li>
-	<li class="staOne">
-		<a href="javascript:;">心肾同治</a>
+	<li class="staOne" id="t3">
+		<div class="float width"><a href="javascript:;">心肾同治</a></div>
 		<ul class="i_uls">
 			<?php
 			if(!empty($info2_cate)){
@@ -41,8 +43,8 @@
 			<?php }}?>
 		</ul>
 	</li>
-	<li class="staOne">
-		<a href="javascript:;">最新动态</a>
+	<li class="staOne" id="t4">
+		<div class="float width"><a href="javascript:;">最新动态</a></div>
 		<ul class="i_uls">
 			<?php
 			if(!empty($info_cate)){
@@ -56,9 +58,9 @@
 		</ul>
 	</li>
 	<li>
-		<a href="/contact.php?AId=11">联系心宝</a>
+		<div class="width float"><a href="/contact.php?AId=11">联系心宝</a></div>
 	</li>
 	<li>
-		<a href="https://sso.jingoal.com/#/login">员工登录</a>
+		<div class="width float"><a href="https://sso.jingoal.com/#/login">员工登录</a></div>
 	</li>
 </ul>
