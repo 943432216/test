@@ -16,6 +16,23 @@ $cate_nav_new[] = $pdjiao;
 $pageName='pro';
 $banner=$db->get_one('ad',"AId='6'");
 //var_dump($cate_nav_new);exit;
+switch ($_GET['CateId']) {
+	case '24': 
+		$pic_name = 'title_product_01.png'; 
+		break;
+	case '10': 
+		$pic_name = 'title_product_02.png'; 
+		break;
+	case '11': 
+		$pic_name = 'title_product_03.png'; 
+		break;
+	case '22': 
+		$pic_name = 'title_product_04.png'; 
+		break;
+	default:  
+		$pic_name = 'title_product_01.png';
+		break;
+}
 ?>
 <!DOCTYPE html>
 <html>
@@ -60,10 +77,15 @@ $banner=$db->get_one('ad',"AId='6'");
 				</div>
 			</div>
 			<div class="banners float width">
-				<img src="img/product.jpg" class="img" />
+				<?php
+			    for($i=0;$i<5;$i++){
+				if(!is_file($site_root_path.$banner['PicPath_'.$i]))continue;
+				?>
+				<img src="<?=$banner['PicPath_'.$i]?>" class="img" style="<?=$i==0?'':'display:none;'?>"/>
+				<?php }?>
 			</div>
 			<section class="float width">
-				<div class="stc_title"><img src="img/title_product_01.png" alt="" class="img" /></div>
+				<div class="stc_title"><img src="img/<?=$pic_name?>" alt="" class="img" /></div>
 				<div class="_con">
 					<?php 
 					for($i=0,$len=count($product_row);$i<$len;$i++){
