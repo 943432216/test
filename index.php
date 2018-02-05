@@ -148,13 +148,10 @@ $company_state = json_encode($company_state, JSON_UNESCAPED_UNICODE);
 			</section>
 			<div class="width float new_bt">
 				<div class="moreNew">
-					<a href="company_new.html">了解更多企业动态</a>
+					<a href="/info.php?CateId=1">了解更多企业动态</a>
 				</div>
 			</div>
 			<?php include('/footer.php'); ?>
-		<div class="width float">
-			<iframe src="footer.html" width="100%" height="100px" frameborder="0" scrolling="no"></iframe>
-		</div>
 
 		</div>
 	</body>

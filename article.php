@@ -95,7 +95,7 @@ if($GroupId==1){
 				<div class="stc_title"><img src="img/<?=$pic_name?>" alt=""  class="img"/></div>
 				<div class="_con">
 					<?php if ($_GET['AId'] == '4') {?>
-						<img src="img/spend.png" alt="董事长致辞" class="img tcs"/>
+						<img src="img/spend.png" alt="董事长致词" class="img tcs"/>
 					<?php } else {
 						echo $article_row['Contents'];
 					}
@@ -103,17 +103,7 @@ if($GroupId==1){
 				</div>
 			</section>
 			
-			<div class="blogroll">
-				<div class="blogroll_left">友情链接</div>
-				<div class="blogroll_right">
-					<a href="http://www.360kad.com/product/575808.shtml">龟鹿补肾片-康爱多网上药店</a>
-					<a href="http://www.gdda.gov.cn/publicfiles/business/htmlfiles/jsjzz/index.htm">广东省食品药品监督管理总局</a>
-					<a href="http://www.sda.gov.cn/WS01/CL0001/">国家食品药品监督管理总局</a>
-				</div>
-			</div>
-			<div class="width float">
-				<iframe src="footer.html" width="100%" height="100px" frameborder="0" scrolling="no"></iframe>
-			</div>
+			<?php include('/footer.php'); ?>
 
 		</div>
 	</body>
