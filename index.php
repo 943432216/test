@@ -173,7 +173,7 @@ $company_state = json_encode($company_state, JSON_UNESCAPED_UNICODE);
 				$('.i_ul').toggle(500);
 			})
 			$('.staOne').click(function() {
-				$('.staOne').children('ul').slideUp();
+//				$('.staOne').children('ul').slideUp();
 				$(this).children('ul').slideToggle();
 			})
 			cj(company_state);

@@ -120,10 +120,7 @@ switch ($_GET['CateId']) {
 	<script src="js/main.js" type="text/javascript" charset="utf-8"></script>
 	<script type="text/javascript">
 		$(function() {
-			var $nnx=$('._con').height();
-			if ($nnx<420) {
-				$('._con').css('height','430px')
-			}
+			
 			linkages('products','#t2');
 		})
 	</script>

@@ -58,7 +58,7 @@ $content=$db->get_one('info2_contents',"InfoId='29'");
 				$('.i_ul').toggle(500);
 			})
 			$('.staOne').click(function() {
-				$('.staOne').children('ul').slideUp();
+//				$('.staOne').children('ul').slideUp();
 				$(this).children('ul').slideToggle();
 			})
 		})

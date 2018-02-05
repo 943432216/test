@@ -120,7 +120,7 @@ function linkages(html, id) {
 		$('.i_ul').toggle(500);
 	})
 	$('.staOne').click(function() {
-		$('.staOne').children('ul').slideUp();
+//		$('.staOne').children('ul').slideUp();
 		$(this).children('ul').slideToggle();
 	})
 	inc(f);
