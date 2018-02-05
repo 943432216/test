@@ -55,7 +55,7 @@ $company_state = json_encode($company_state, JSON_UNESCAPED_UNICODE);
 								if(!is_file($site_root_path.$banner['PicPath_'.$i]))continue;
 						?>
 						<li>
-							<a href="<?=get_url('product',$product_row[$i])?>"><img src="<?=$banner['PicPath_'.$i]?>" class="img"></a>
+							<a href="javascript:;"><img src="<?=$banner['PicPath_'.$i]?>" class="img"></a>
 						</li>
 						<?php }}?>
 					</ul>
