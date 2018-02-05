@@ -72,7 +72,7 @@ if($GroupId==1){
 				<?php include('navigate.php'); ?>
 			</div>
 			<header>
-				<div class="header_logo"></div>
+				<a href="index.php" class="header_logo"></a>
 				<h1 class="header_con"><?=$t_title?></h1>
 				<div class="header_nav"></div>
 			</header>
@@ -88,23 +88,23 @@ if($GroupId==1){
 			    for($i=0;$i<5;$i++){
 					if(!is_file($site_root_path.$banner['PicPath_'.$i]))continue;
 				?>
-				<div class="banners" style="background:url(<?=$banner['PicPath_'.$i]?>) no-repeat top center;<?=$i==0?'':'display:none;'?>"></div>
+				<div class="banners">
+					<img src="<?=$banner['PicPath_'.$i]?>" class="img" style="<?=$i==0?'':'display:none;'?>"/>
+				</div>
 				<?php }?>
 			</div>
 			<section class="float width b1">
 				<div class="stc_title"><img src="img/<?=$pic_name?>" alt=""  class="img"/></div>
 				<div class="_con">
 					<?php if ($_GET['AId'] == '4') {?>
-						<img src="img/spend.png" alt="董事长致词" class="img tcs"/>
+						<img src="img/spend.png" alt="董事长致辞" class="img tcs"/>
 					<?php } else {
 						echo $article_row['Contents'];
 					}
 					?>					
 				</div>
 			</section>
-			
 			<?php include('/footer.php'); ?>
-
 		</div>
 	</body>
 	<script src="js/jquery-2.1.1.min.js" type="text/javascript" charset="utf-8"></script>
@@ -114,6 +114,7 @@ if($GroupId==1){
 		$(function() {
 			$('._con').find('*').removeAttr('style');
 			$('._con').find('img').addClass('img');
+			$('._con').find('div').addClass('ncd')
 			linkages('products','#t1');
 		})
 	</script>

@@ -16,23 +16,6 @@ $cate_nav_new[] = $pdjiao;
 $pageName='pro';
 $banner=$db->get_one('ad',"AId='6'");
 //var_dump($cate_nav_new);exit;
-switch ($_GET['CateId']) {
-	case '24': 
-		$pic_name = 'title_product_01.png'; 
-		break;
-	case '10': 
-		$pic_name = 'title_product_02.png'; 
-		break;
-	case '11': 
-		$pic_name = 'title_product_03.png'; 
-		break;
-	case '22': 
-		$pic_name = 'title_product_04.png'; 
-		break;
-	default:  
-		$pic_name = 'title_product_01.png';
-		break;
-}
 ?>
 <!DOCTYPE html>
 <html>
@@ -59,7 +42,7 @@ switch ($_GET['CateId']) {
 				<?php include('navigate.php'); ?>
 			</div>
 			<header>
-				<div class="header_logo"></div>
+				<a href="index.php" class="header_logo"></a>
 				<h1 class="header_con">产品中心</h1>
 				<div class="header_nav"></div>
 			</header>
@@ -77,15 +60,10 @@ switch ($_GET['CateId']) {
 				</div>
 			</div>
 			<div class="banners float width">
-				<?php
-			    for($i=0;$i<5;$i++){
-				if(!is_file($site_root_path.$banner['PicPath_'.$i]))continue;
-				?>
-				<img src="<?=$banner['PicPath_'.$i]?>" class="img" style="<?=$i==0?'':'display:none;'?>"/>
-				<?php }?>
+				<img src="img/product.jpg" class="img" />
 			</div>
 			<section class="float width">
-				<div class="stc_title"><img src="img/<?=$pic_name?>" alt="" class="img" /></div>
+				<div class="stc_title"><img src="img/title_product_01.png" alt="" class="img" /></div>
 				<div class="_con">
 					<?php 
 					for($i=0,$len=count($product_row);$i<$len;$i++){
@@ -101,8 +79,18 @@ switch ($_GET['CateId']) {
 					<?php }?>
 				</div>
 			</section>
+			<!--<div class="blogroll">
+				<div class="blogroll_left">友情链接</div>
+				<div class="blogroll_right">
+					<a href="http://www.360kad.com/product/575808.shtml">龟鹿补肾片-康爱多网上药店</a>
+					<a href="http://www.gdda.gov.cn/publicfiles/business/htmlfiles/jsjzz/index.htm">广东省食品药品监督管理总局</a>
+					<a href="http://www.sda.gov.cn/WS01/CL0001/">国家食品药品监督管理总局</a>
+				</div>
+			</div>
+			<div class="width float">
+				<iframe src="footer.html" width="100%" height="100px" frameborder="0" scrolling="no"></iframe>
+			</div>-->
 			<?php include('/footer.php'); ?>
-
 		</div>
 	</body>
 	<script src="js/jquery-2.1.1.min.js" type="text/javascript" charset="utf-8"></script>
@@ -110,6 +98,10 @@ switch ($_GET['CateId']) {
 	<script src="js/main.js" type="text/javascript" charset="utf-8"></script>
 	<script type="text/javascript">
 		$(function() {
+			var $nnx=$('._con').height();
+			if ($nnx<420) {
+				$('._con').css('height','430px')
+			}
 			linkages('products','#t2');
 		})
 	</script>

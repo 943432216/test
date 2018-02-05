@@ -57,7 +57,7 @@ if ($_SERVER['REQUEST_METHOD']=='POST') {
 				<?php include('navigate.php'); ?>
 			</div>
 			<header>
-				<div class="header_logo"></div>
+				<a href="index.php" class="header_logo"></a>
 				<h1 class="header_con">联系心宝</h1>
 				<div class="header_nav"></div>
 			</header>
@@ -136,7 +136,6 @@ if ($_SERVER['REQUEST_METHOD']=='POST') {
 				</div>
 			</section>
 			<?php include('/footer.php'); ?>
-
 		</div>
 	</body>
 	<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=2D4K3ZUZECvi34iAleP0hMc9PtshuhdI"></script>

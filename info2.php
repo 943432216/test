@@ -61,7 +61,7 @@ switch ($_GET['CateId']) {
 				<?php include('navigate.php'); ?>
 			</div>
 			<header>
-				<div class="header_logo"></div>
+				<a href="index.php" class="header_logo"></a>
 				<h1 class="header_con">心肾同治</h1>
 				<div class="header_nav"></div>
 			</header>

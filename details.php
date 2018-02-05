@@ -16,6 +16,7 @@ $content=$db->get_one('info2_contents',"InfoId='29'");
 		<title>心宝药业</title>
 		<link rel="stylesheet" type="text/css" href="css/main.css" />
 		<link rel="stylesheet" type="text/css" href="css/dome1.css" />
+		<link rel="stylesheet" type="text/css" href="css/css.css"/>
 		<script type="text/javascript">
 			(function() {
 				var html = document.documentElement;
@@ -31,7 +32,7 @@ $content=$db->get_one('info2_contents',"InfoId='29'");
 				<?php include('navigate.php'); ?>
 			</div>
 			<header>
-				<div class="header_logo"></div>
+				<a href="index.php" class="header_logo"></a>
 				<h1 class="header_con">公司动态</h1>
 				<div class="header_nav"></div>
 			</header>
@@ -45,7 +46,7 @@ $content=$db->get_one('info2_contents',"InfoId='29'");
 				</div>
 			</section>
 			<?php include('/footer.php'); ?>
-
+			
 		</div>
 	</body>
 	<script src="js/jquery-2.1.1.min.js" type="text/javascript" charset="utf-8"></script>

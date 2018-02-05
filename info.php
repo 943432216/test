@@ -61,7 +61,7 @@ $fresh_state = json_encode($fresh_state, JSON_UNESCAPED_UNICODE);
 				<?php include('navigate.php'); ?>
 			</div>
 			<header>
-				<div class="header_logo"></div>
+				<a href="index.php" class="header_logo"></a>
 				<h1 class="header_con">最新动态</h1>
 				<div class="header_nav"></div>
 			</header>
@@ -171,8 +171,18 @@ $fresh_state = json_encode($fresh_state, JSON_UNESCAPED_UNICODE);
 			<div class="hx">
 				<div></div>
 			</div>
+			<!--<div class="blogroll">
+				<div class="blogroll_left">友情链接</div>
+				<div class="blogroll_right">
+					<a href="http://www.360kad.com/product/575808.shtml">龟鹿补肾片-康爱多网上药店</a>
+					<a href="http://www.gdda.gov.cn/publicfiles/business/htmlfiles/jsjzz/index.htm">广东省食品药品监督管理总局</a>
+					<a href="http://www.sda.gov.cn/WS01/CL0001/">国家食品药品监督管理总局</a>
+				</div>
+			</div>
+			<div class="width float">
+				<iframe src="footer.html" width="100%" height="100px" frameborder="0" scrolling="no"></iframe>
+			</div>-->
 			<?php include('/footer.php'); ?>
-
 		</div>
 	</body>
 	<script src="js/jquery-2.1.1.min.js" type="text/javascript" charset="utf-8"></script>

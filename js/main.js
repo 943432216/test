@@ -14,7 +14,7 @@ function startsd() {
 }
 
 function cj(data) {
-	console.log(data);
+//	console.log(data);
 	var sn = '<div class="new_s"><span class="new_left"><img src="" class="img"/></span><span class="new_right"><ul><li><a href=""></a></li><li><a href="" class="title"></a></li></ul></span></div>';
 	$.each(data, function(a, b) {
 		$('.new_boxs').append(sn);
@@ -53,7 +53,7 @@ function linkages(html, id) {
 			d = 1;
 			break;
 	}
-	if(d = 0) {
+	if(d == 0) {
 		switch(c) {
 			case '3':
 				f = '公司简介';
@@ -72,7 +72,7 @@ function linkages(html, id) {
 				break;
 		}
 	}
-	if(d = 1) {
+	if(d == 1) {
 		switch(c) {
 			case '1':
 				f = '公司动态';
@@ -106,6 +106,8 @@ function linkages(html, id) {
 	if(html == 'info' && c == '10') {
 		f = '龟鹿补肾片健康手册';
 	}
+//	console.log(d)
+//	console.log(b)
 	$('.staOne').children('ul').slideUp();
 	$(id).children('ul').slideDown();
 	$(id).find('div').addClass('bgcolor');
@@ -126,15 +128,14 @@ function linkages(html, id) {
 }
 
 function inc(num) {
-	console.log(num);
+//	console.log(num);
 	$('.banner_nav').find('li').each(function() {
-		console.log($(this).children('a').html());
 		if($(this).children('a').html() == num) {
 			$(this).children('a').addClass('bor_bn');
 		}
 	})
 	$('.banner_navs').find('li').each(function() {
-		console.log($(this).children('a').html());
+//		console.log($(this).children('a').html());
 		if($(this).children('a').html() == num) {
 			$(this).children('a').addClass('bor_bn');
 		}
@@ -146,7 +147,7 @@ function headers() {
 	$('.i_ul').find('li').each(function() {
 		if($(this).children('a').html() == nx) {
 			$(this).children('a').addClass('color');
-			$(this).css('background','#B60005')
+			$(this).css('background','#B60005');
 		}
 	})
 }

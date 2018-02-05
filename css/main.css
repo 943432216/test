@@ -559,7 +559,6 @@ footer p {
 }
 .product span {
   width: 100%;
-  height: 6.3rem;
   float: left;
   display: block;
 }
@@ -577,7 +576,6 @@ footer p {
   position: relative;
   width: 96%;
   padding: 0 2%;
-  text-indent: 2em;
   color: #333333;
   font-size: 0.46rem;
   line-height: 200%;
@@ -610,7 +608,6 @@ footer p {
 .detail_box div {
   float: left;
   width: 100%;
-  text-indent: 2em;
   color: #333333;
   font-size: 0.46rem;
   line-height: 200%;
@@ -618,19 +615,16 @@ footer p {
 .detail_box p {
   float: left;
   width: 100%;
-  text-indent: 2em;
   color: #333333;
   font-size: 0.46rem;
   line-height: 200%;
 }
-.detail_box strong {
+.strong {
   width: 100%;
   float: left;
   text-align: center;
 }
-.detail_box strong span {
-  background: url(../img/bordera.png) no-repeat;
-  background-size: 100% 100%;
+.strong span {
   color: #c49858;
   font-size: 0.44rem;
   padding: 0.2rem 0.4rem;
@@ -657,7 +651,7 @@ footer p {
   margin: 0 2%;
 }
 .logos {
-  width: 5.12rem;
+  width: 4rem;
   position: absolute;
   right: 2%;
   bottom: 1%;
@@ -674,4 +668,11 @@ footer p {
   float: left;
   background: #fff;
   margin: 0 2%;
+}
+.ncd {
+  float: left;
+  width: 100%;
+  color: #333333;
+  font-size: 0.46rem;
+  line-height: 200%;
 }

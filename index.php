@@ -41,7 +41,7 @@ $company_state = json_encode($company_state, JSON_UNESCAPED_UNICODE);
 				<?php include('navigate.php'); ?>
 			</div>
 			<header>
-				<div class="header_logo"></div>
+				<a href="index.php" class="header_logo"></a>
 				<h1 class="header_con">首页</h1>
 				<div class="header_nav"></div>
 			</header>

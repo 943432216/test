@@ -37,7 +37,7 @@ $banner=$db->get_one('ad',"AId='5'");
 				<?php include('navigate.php'); ?>
 			</div>
 			<header>
-				<div class="header_logo"></div>
+				<a href="index.php" class="header_logo"></a>
 				<h1 class="header_con">公司动态</h1>
 				<div class="header_nav"></div>
 			</header>
@@ -68,22 +68,11 @@ $banner=$db->get_one('ad',"AId='5'");
 			$('.ddd').find('div').removeAttr('style');
 			$('.ddd').find('span').css('width','100%')
 			$('.ddd').find('strong').removeAttr('style');
+			$('.ddd').find('strong').addClass('strong');
 			$('.ddd').find('img').removeAttr('style');
 			$('.ddd').find('img').addClass('img');
-//			$('.detail_box').children(':first').addClass('ts');
 			$('section').removeAttr('style');
 			$('section').css('padding-bottom','0');
-			console.log($('section').css('padding-bottom'))
-			var dsxs=null;
-			var dsx=$('.ddd').find('section').find('p').each(function(){
-				dsxs=trim($(this).html());
-				console.log(dsxs)
-				if(dsxs=='nbps;'){
-					$(this).remove();
-				}
-			});
-			
-			
 		})
 	</script>
 

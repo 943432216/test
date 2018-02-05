@@ -17,6 +17,7 @@ $content=$db->get_one('info2_contents',"InfoId='29'");
 		<title>心宝药业</title>
 		<link rel="stylesheet" type="text/css" href="css/main.css" />
 		<link rel="stylesheet" type="text/css" href="css/dome1.css" />
+		<link rel="stylesheet" type="text/css" href="css/css.css"/>
 		<script type="text/javascript">
 			(function() {
 				var html = document.documentElement;
@@ -32,15 +33,16 @@ $content=$db->get_one('info2_contents',"InfoId='29'");
 				<?php include('navigate.php'); ?>
 			</div>
 			<header>
-				<div class="header_logo"></div>
+				<a href="index.php" class="header_logo"></a>
 				<h1 class="header_con">公司动态</h1>
 				<div class="header_nav"></div>
 			</header>
 			
-			<div class="detail_box float width">
+			<!--<div class="detail_box float width">
 				<div class="logob"></div>			
-			</div>
-			<section class="float width">
+			</div>-->
+			<section class="float width ddd">
+				<div class="float width logos"><img src="img/logol.png" class="img"/></div>
 				<div class="detail_box float width">
 					<?=$info_detail;?>
 				</div>
@@ -61,6 +63,15 @@ $content=$db->get_one('info2_contents',"InfoId='29'");
 				$('.staOne').children('ul').slideUp();
 				$(this).children('ul').slideToggle();
 			})
+			$('.ddd').find("*").removeAttr('style');
+			$('.ddd').find('img').addClass('img');
+			var $nnx=$('.detail_box').height();
+			if ($nnx<520) {
+				$('.detail_box').css('height','550px')
+			}
+			
+//			console.log($('.detail_box').height())
+			
 		})
 	</script>
 
