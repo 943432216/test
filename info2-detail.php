@@ -4,6 +4,7 @@ include($site_root_path.'/inc/set/ext_var.php');
 include($site_root_path.'/inc/fun/mysql.php');
 include($site_root_path.'/inc/function.php');
 include($site_root_path.'/inc/common.php');
+include($site_root_path.'/inc/lib/info2/detail.php');
 
 $content=$db->get_one('info2_contents',"InfoId='29'");
 ?>
@@ -41,7 +42,7 @@ $content=$db->get_one('info2_contents',"InfoId='29'");
 			</div>
 			<section class="float width">
 				<div class="detail_box float width">
-					<?=$db->get_value('info_contents', "InfoId='208'", 'Contents');?>
+					<?=$info_detail;?>
 				</div>
 			</section>
 			<div class="blogroll">
