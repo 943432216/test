@@ -64,26 +64,26 @@ $company_state = json_encode($company_state, JSON_UNESCAPED_UNICODE);
 			<div class="nav width float">
 				<div class="nav_icon">
 					<span>
-						<p><a href="company_profile.html"><img src="img/nav_01.png" class="img"/></a></p>
-						<p><a href="company_profile.html">关于心宝</a></p>
+						<p><a href="/article.php?AId=3"><img src="img/nav_01.png" class="img"/></a></p>
+						<p><a href="/article.php?AId=3">关于心宝</a></p>
 					</span>
 					<span>
-						<p><a href="product_01.html"><img src="img/nav_02.png" class="img"/></a></p>
-						<p><a href="product_01.html">产品中心</a></p>
+						<p><a href="/products.php?CateId=24"><img src="img/nav_02.png" class="img"/></a></p>
+						<p><a href="/products.php?CateId=24">产品中心</a></p>
 					</span>
 					<span>
-						<p><a href="heart.html"><img src="img/nav_03.png" class="img"/></a></p>
-						<p><a href="heart.html">心肾同治</a></p>
+						<p><a href="/info2.php?CateId=8"><img src="img/nav_03.png" class="img"/></a></p>
+						<p><a href="/info2.php?CateId=8">心肾同治</a></p>
 					</span>
 				</div>
 				<div class="nav_icon">
 					<span>
-						<p><a href="company_new.html"><img src="img/nav_04.png" class="img"/></a></p>
-						<p><a href="company_new.html">最新动态</a></p>
+						<p><a href="/info.php?CateId=1"><img src="img/nav_04.png" class="img"/></a></p>
+						<p><a href="/info.php?CateId=1">最新动态</a></p>
 					</span>
 					<span>
-						<p><a href="contact.html"><img src="img/nav_05.png" class="img"/></a></p>
-						<p><a href="contact.html">联系心宝</a></p>
+						<p><a href="/contact.php?AId=11"><img src="img/nav_05.png" class="img"/></a></p>
+						<p><a href="/contact.php?AId=11">联系心宝</a></p>
 					</span>
 					<span>
 						<p><a href="https://sso.jingoal.com/#/login"><img src="img/nav_06.png" class="img"/></a></p>
