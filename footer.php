@@ -9,7 +9,7 @@
 		<?php } ?>
 	</div>
 </div>
-<footer class="width">
+<footer class="width float">
 	<p>《互联网药品信息服务资格证》 编号（粤）-非经营性-2011-0122</p>
 	<p>Copyright © 广东心宝制药有限公司</p>
 	<p>粤ICP备：10025609</p>
