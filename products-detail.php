@@ -18,6 +18,24 @@ $product_description=$db->get_one('product_description',"ProId='$ProId'",'Descri
 $ad_position = $db->get_one('product_category',"CateId='$CateId'",'Category');
 $ad_position = $ad_position['Category'];
 $banner=$db->get_one('ad',"AdPosition='$ad_position'");
+//var_dump($product);exit;
+switch ($product['CateId']) {
+	case '24': 
+		$title_top = $xbw;
+		break;
+	case '10': 
+		$title_top = $bushen;
+		break;
+	case '11': 
+		$title_top = $pdpian;
+		break;
+	case '22': 
+		$title_top = $pdjiao;
+		break;
+	default:  
+		$title_top = $xbw;
+		break;
+}
 //var_dump($banner);exit;
 //$pic_top = $db->get_one('ad',"AId='6");
 ?>
@@ -46,7 +64,7 @@ $banner=$db->get_one('ad',"AdPosition='$ad_position'");
 			</div>
 			<header>
 				<a href="index.php" class="header_logo"></a>
-				<h1 class="header_con">心宝丸</h1>
+				<h1 class="header_con"><?=$title_top['Category']?></h1>
 				<div class="header_nav"></div>
 			</header>
 			<div class="banner float width">
