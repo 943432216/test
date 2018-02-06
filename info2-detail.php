@@ -27,6 +27,9 @@ $CateId=(int)$info_row['CateId'];
 				html.style.fontSize = w / 15 + 'px';
 			})();
 		</script>
+		<script type="text/javascript">
+			var cate_id = <?=$CateId?>;
+		</script>
 	</head>
 
 	<body>
@@ -55,16 +58,10 @@ $CateId=(int)$info_row['CateId'];
 	</body>
 	<script src="js/jquery-2.1.1.min.js" type="text/javascript" charset="utf-8"></script>
 	<script src="js/unslider.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/main.js" type="text/javascript" charset="utf-8"></script>
 	<script type="text/javascript">
 		$(function() {
-			$('.staOne').children('ul').slideUp();
-			$('.header_nav').click(function() {
-				$('.i_ul').toggle(500);
-			})
-			$('.staOne').click(function() {
-				$('.staOne').children('ul').slideUp();
-				$(this).children('ul').slideToggle();
-			})
+			linkage(cate_id,'#t3','info')
 			$('.ddd').find("*").removeAttr('style');
 			$('.ddd').find('img').addClass('img');
 			var $nnx=$('.detail_box').height();

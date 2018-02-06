@@ -255,11 +255,11 @@ header {
 }
 .blogroll_left {
   float: left;
-  background: url(../img/lianjie.png) no-repeat 0.4rem 0.6rem;
+  background: url(../img/lianjie.png) no-repeat 0.46rem 0.6rem;
   color: #b30003;
   font-size: 0.36rem;
   padding: 0.5rem 0 0 0.9rem;
-  background-size: 0.36rem 0.4rem;
+  background-size: 0.32rem 0.32rem;
   width: 1.6rem;
   height: 1.52rem;
 }

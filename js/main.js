@@ -14,7 +14,7 @@ function startsd() {
 }
 
 function cj(data) {
-//	console.log(data);
+	//	console.log(data);
 	var sn = '<div class="new_s"><span class="new_left"><img src="" class="img"/></span><span class="new_right"><ul><li><a href=""></a></li><li><a href="" class="title"></a></li></ul></span></div>';
 	$.each(data, function(a, b) {
 		$('.new_boxs').append(sn);
@@ -138,11 +138,68 @@ function inc(num) {
 }
 
 function headers() {
-	var nx=$('.header_con').html();
+	var nx = $('.header_con').html();
 	$('.i_ul').find('li').each(function() {
 		if($(this).children('a').html() == nx) {
 			$(this).children('a').addClass('color');
-			$(this).css('background','#B60005');
+			$(this).css('background', '#B60005');
 		}
+	})
+}
+
+function linkage(data, id, htmls) {
+	var a, b,c;
+	b = data.toString();
+	c=htmls
+	if(c == 'product') {
+		switch(b) {
+			case '10':
+				a = '龟鹿补肾片';
+				break;
+			case '11':
+				a = '蒲地蓝消炎片';
+				break;
+			case '22':
+				a = '蒲蓝地消炎胶囊';
+				break;
+			case '24':
+				a = '心宝丸';
+				break;
+		}
+		inc(a);
+	} else {
+		switch(b) {
+			case '1':
+				a = '公司动态';
+				break;
+			case '2':
+				a = '行业动态';
+				break;
+			case '6':
+				a = '视频中心';
+				break;
+			case '9':
+				a = '心宝丸的临床应用';
+				break;
+			case '10':
+				a = '龟鹿补肾片健康手册';
+				break;	
+		}
+		
+	}
+//	console.log(c == 'product')
+	$('.staOne').children('ul').slideUp();
+	$(id).children('ul').slideDown();
+	$(id).find('div').addClass('bgcolor');
+	$('.i_ul').find('li').each(function() {
+		if($(this).children('a').html() == a) {
+			$(this).children('a').addClass('color');
+		}
+	})
+	$('.header_nav').click(function() {
+		$('.i_ul').toggle(500);
+	})
+	$('.staOne').click(function() {
+		$(this).children('ul').slideToggle();
 	})
 }
