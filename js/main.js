@@ -106,8 +106,6 @@ function linkages(html, id) {
 	if(html == 'info' && c == '10') {
 		f = '龟鹿补肾片健康手册';
 	}
-//	console.log(d)
-//	console.log(b)
 	$('.staOne').children('ul').slideUp();
 	$(id).children('ul').slideDown();
 	$(id).find('div').addClass('bgcolor');
@@ -120,7 +118,6 @@ function linkages(html, id) {
 		$('.i_ul').toggle(500);
 	})
 	$('.staOne').click(function() {
-//		$('.staOne').children('ul').slideUp();
 		$(this).children('ul').slideToggle();
 	})
 	inc(f);
@@ -128,14 +125,12 @@ function linkages(html, id) {
 }
 
 function inc(num) {
-//	console.log(num);
 	$('.banner_nav').find('li').each(function() {
 		if($(this).children('a').html() == num) {
 			$(this).children('a').addClass('bor_bn');
 		}
 	})
 	$('.banner_navs').find('li').each(function() {
-//		console.log($(this).children('a').html());
 		if($(this).children('a').html() == num) {
 			$(this).children('a').addClass('bor_bn');
 		}
