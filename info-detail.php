@@ -11,6 +11,7 @@ if($CateId){
 }
 $pageName='info';
 $banner=$db->get_one('ad',"AId='5'");
+//var_dump($cur_cate['CateId']);exit;
 ?>
 <!DOCTYPE html>
 <html>
@@ -38,7 +39,7 @@ $banner=$db->get_one('ad',"AId='5'");
 			</div>
 			<header>
 				<a href="index.php" class="header_logo"></a>
-				<h1 class="header_con">公司动态</h1>
+				<h1 class="header_con"><?=$cur_cate['Category']?></h1>
 				<div class="header_nav"></div>
 			</header>
 			<section class="float width ddd">
