@@ -7,6 +7,8 @@ include($site_root_path.'/inc/common.php');
 include($site_root_path.'/inc/lib/info2/detail.php');
 
 $content=$db->get_one('info2_contents',"InfoId='29'");
+$CateId=(int)$info_row['CateId'];
+//var_dump($CateId);exit;
 ?>
 <!DOCTYPE html>
 <html>
@@ -34,7 +36,7 @@ $content=$db->get_one('info2_contents',"InfoId='29'");
 			</div>
 			<header>
 				<a href="index.php" class="header_logo"></a>
-				<h1 class="header_con">公司动态</h1>
+				<h1 class="header_con">心肾同治</h1>
 				<div class="header_nav"></div>
 			</header>
 			
