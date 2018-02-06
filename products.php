@@ -19,23 +19,18 @@ $banner=$db->get_one('ad',"AId='6'");
 switch ($_GET['CateId']) {
 	case '24': 
 		$pic_name = 'title_product_01.png';
-		$title_top = $xbw;
 		break;
 	case '10': 
 		$pic_name = 'title_product_02.png';
-		$title_top = $bushen;
 		break;
 	case '11': 
 		$pic_name = 'title_product_03.png';
-		$title_top = $pdpian;
 		break;
 	case '22': 
 		$pic_name = 'title_product_04.png';
-		$title_top = $pdjiao;
 		break;
 	default:  
 		$pic_name = 'title_product_01.png';
-		$title_top = $xbw;
 		break;
 }
 //var_dump($title_top['CateId']);exit;
@@ -66,7 +61,7 @@ switch ($_GET['CateId']) {
 			</div>
 			<header>
 				<a href="index.php" class="header_logo"></a>
-				<h1 class="header_con"><?=$title_top['Category']?></h1>
+				<h1 class="header_con">产品中心</h1>
 				<div class="header_nav"></div>
 			</header>
 			<div class="banner float width">
