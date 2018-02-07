@@ -6,6 +6,7 @@ include($site_root_path.'/inc/function.php');
 include($site_root_path.'/inc/common.php');
 
 $ProId = htmlentities($_GET['ProId']);
+$product_row=$db->get_one('product',"ProId='$ProId'");
 $cate_nav = $db->get_all('product_category',"CateId in ('24','10','11','22')");
 list($bushen,$pdpian,$pdjiao,$xbw) = $cate_nav;
 $cate_nav_new[] = $xbw;
@@ -86,12 +87,11 @@ switch ($product['CateId']) {
 					<div class="banner_ts">
 						<div id="marquee" style="width: 100%;">
 							<ul>
-								<?php  
-								for($i=0;$i<5;$i++){
-									if(!is_file($site_root_path.$banner['PicPath_'.$i]))continue;
+								<?php for($i=0;$i<5;$i++){
+									if(!is_file($site_root_path.$product_row['PicPath_'.$i]))continue;	 
 								?>
 								<li>
-									<a href="<?=get_url('product',$product_row[$i])?>"><img src="<?=$banner['PicPath_'.$i]?>" class="img"></a>
+									<a href="javascript:;"><img src="<?=str_replace('s_', '111X85_', $product_row['PicPath_'.$i]);?>" class="img"></a>
 								</li>
 								<?php }?>
 							</ul>
