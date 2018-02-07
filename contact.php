@@ -45,7 +45,7 @@ if ($_SERVER['REQUEST_METHOD']=='POST') {
 	$error = json_encode($error, JSON_UNESCAPED_UNICODE);
 	//var_dump($error);exit;
 } else {
-	$error = NULL;
+	$error = 0;
 }
 ?>
 <!DOCTYPE html>
@@ -62,6 +62,9 @@ if ($_SERVER['REQUEST_METHOD']=='POST') {
 				var w = html.getBoundingClientRect().width;
 				html.style.fontSize = w / 15 + 'px';
 			})();
+		</script>
+		<script type="text/javascript">
+			var errors = <?=$error?>;
 		</script>
 	</head>
 
@@ -106,7 +109,10 @@ if ($_SERVER['REQUEST_METHOD']=='POST') {
 									<textarea name="Message" rows="5" cols="" id="Message"></textarea>
 								</span>
 								<span>
-									<p class="yl">验证码：</p>
+									<!--<p>内容：</p>-->
+									<p >验证码:</p>
+									<b>*</b>
+									
 									<input type="text" name="VCode" id="VCode" value="" />
 									<!--<p id="yt"></p>-->
 									<!-- <img src="img/yzm.png" alt=""  id="yt"/> -->
@@ -165,8 +171,29 @@ if ($_SERVER['REQUEST_METHOD']=='POST') {
 		
 		
 		$(function() {
+			var arr=[];
+			var err;
 			$('.sy').children('div').addClass('bgcolor')
-			linkages('products','#t5');
+			$('.staOne').children('ul').slideUp();
+			$('#t5').children('ul').slideDown();
+			$('#t5').find('div').addClass('bgcolor');
+			$('.header_nav').click(function() {
+				$('.i_ul').toggle(500);
+			})
+			$('.staOne').click(function() {
+				$(this).children('ul').slideToggle();
+			})
+			if (errors==0) {
+				
+			}else{
+				$.each(errors, function(a,b) {
+					err+=errors[a]+'\n';
+					
+				});
+				alert(err.split('undefined')[1]);
+//				console.log(err.split('undefined')[1])
+			}
+			
 		})
 	</script>
 
