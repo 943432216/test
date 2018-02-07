@@ -45,7 +45,7 @@ if ($_SERVER['REQUEST_METHOD']=='POST') {
 	$error = json_encode($error, JSON_UNESCAPED_UNICODE);
 	//var_dump($error);exit;
 } else {
-	$error = '';
+	$error = NULL;
 }
 ?>
 <!DOCTYPE html>
