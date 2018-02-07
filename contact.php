@@ -15,14 +15,19 @@ if ($_SERVER['REQUEST_METHOD']=='POST') {
 	$Message = trim(htmlentities($_POST['Message']));
 	$VCode = strtoupper(trim(htmlentities($_POST['VCode'])));
 
-	if (strlen($Name)>10) $error['Name'] = '请输入10个字以内';
+	strlen($Name) > 0 ?  true : $error['Name'] = '姓名不能为空';
+	strlen($Message) > 0 ?  true : $error['Message'] = '留言不能为空';
+	strlen($Name)>30 ? $error['Name'] = '请输入10个字以内' : false;
 	if (!filter_var($Email, FILTER_VALIDATE_EMAIL)) $error['Email'] = '邮箱格式不正确';
+	strlen($Email) > 0 ?  true : $error['Email'] = '邮箱不能为空';
 	if (!preg_match('/^1[34578]{1}\d{9}$/', $Phone)) $error['Phone'] = '电话号码格式不正确';
+	strlen($Phone) > 0 ?  true : $error['Phone'] = '电话号码不能为空';
 	if (strlen($Message)>600) $error['Message'] = '留言要在200字以内';
 
 	//var_dump($Message);exit;
 	if ($VCode!=$_SESSION[md5('feedback')] || $_SESSION[md5('feedback')]=='') {	//验证码错误
 		$error['VCode'] = '验证码错误';
+		strlen($VCode) > 0 ?  true : $error['VCode'] = '验证码不能为空';
 		$_SESSION[md5('feedback')]='';
 		unset($_SESSION[md5('feedback')]);
 	} else if (isset($error)) {
