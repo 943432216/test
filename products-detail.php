@@ -91,7 +91,7 @@ switch ($product['CateId']) {
 									if(!is_file($site_root_path.$product_row['PicPath_'.$i]))continue;	 
 								?>
 								<li>
-									<a href="javascript:;"><img src="<?=str_replace('s_', '111X85_', $product_row['PicPath_'.$i]);?>" class="img"></a>
+									<a href="javascript:;"><img src="<?=str_replace('s_', '411X317_', $product_row['PicPath_'.$i]);?>" class="img"></a>
 								</li>
 								<?php }?>
 							</ul>

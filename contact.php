@@ -9,17 +9,23 @@ include($site_root_path.'/inc/lib/feedback/form_post.php');
 
 if ($_SERVER['REQUEST_METHOD']=='POST') {
 	// var_dump($_POST);exit;
-	$Name = htmlentities($_POST['Name']);
-	$Email = htmlentities($_POST['Email']);
-	$Phone = htmlentities($_POST['Phone']);
-	$Message = htmlentities($_POST['Message']);
+	$Name = trim(htmlentities($_POST['Name']));
+	$Email = trim(htmlentities($_POST['Email']));
+	$Phone = trim(htmlentities($_POST['Phone']));
+	$Message = trim(htmlentities($_POST['Message']));
 	$VCode = strtoupper(trim(htmlentities($_POST['VCode'])));
+
+	if (strlen($Name)>10) $error['Name'] = '请输入10个字以内';
+	if (!filter_var($Email, FILTER_VALIDATE_EMAIL)) $error['Email'] = '邮箱格式不正确';
+	if (!preg_match('/^1[34578]{1}\d{9}$/', $Phone)) $error['Phone'] = '电话号码格式不正确';
+	if (strlen($Message)>600) $error['Message'] = '留言要在200字以内';
 
 	//var_dump($Message);exit;
 	if ($VCode!=$_SESSION[md5('feedback')] || $_SESSION[md5('feedback')]=='') {	//验证码错误
+		$error['VCode'] = '验证码错误';
 		$_SESSION[md5('feedback')]='';
 		unset($_SESSION[md5('feedback')]);
-	} else {
+	} else if (isset($error)) {
 		$db->insert('feedback', array(
 			'Name'		=>	$Name,
 			'Email'		=>	$Email,
@@ -31,7 +37,8 @@ if ($_SERVER['REQUEST_METHOD']=='POST') {
 		);
 		//var_dump($ret);exit;
 	}
-
+	$error = json_encode($error, JSON_UNESCAPED_UNICODE);
+	//var_dump($error);exit;
 }
 ?>
 <!DOCTYPE html>
