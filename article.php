@@ -13,27 +13,21 @@ if(!isset($article_row)){
 switch ($_GET['AId']) {
 	case '3': 
 		$pic_name = 'title_about_01.png'; 
-		$t_title  = '公司简介';
 		break;
 	case '6': 
 		$pic_name = 'title_about_02.png'; 
-		$t_title  = '发展历程';
 		break;
 	case '7': 
 		$pic_name = 'title_about_03.png'; 
-		$t_title  = '企业文化';
 		break;
 	case '15': 
 		$pic_name = 'title_about_04.png'; 
-		$t_title  = '企业荣誉';
 		break;
 	case '4': 
 		$pic_name = 'title_about_05.png'; 
-		$t_title  = '董事长致词';
 		break;	
 	default:  
 		$pic_name = 'title_about_01.png'; 
-		$t_title  = '公司简介';
 		break;
 }
 $group_txt=array(
@@ -73,7 +67,7 @@ if($GroupId==1){
 			</div>
 			<header>
 				<a href="index.php" class="header_logo"></a>
-				<h1 class="header_con"><?=$t_title?></h1>
+				<h1 class="header_con">关于心宝</h1>
 				<div class="header_nav"></div>
 			</header>
 			<div class="banner float width">
