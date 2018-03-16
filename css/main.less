@@ -26,12 +26,17 @@ body {
   height: 100%;
   overflow-x: hidden;
   overflow-y: auto;
+   -webkit-transform: translate3d(0,0,0); 
+-moz-transform: translate3d(0,0,0); 
+-ms-transform: translate3d(0,0,0); 
+-o-transform: translate3d(0,0,0); 
+transform: translate3d(0,0,0);
+z-index: 99999999;
 }
 html {
   width: 100%;
   height: 100%;
   overflow: hidden;
-  
 }
 body * {
   /*文字设置*/
@@ -57,7 +62,7 @@ li {
 .img{width: 100%;max-width: 100%;display: block;float: left;}
 section{background: #fff;width:100%;padding-bottom:8/@r;position: relative;}
 ._con{float: left;width: 96%;padding: 10/@r 2% 20/@r 2%;background: #F7F7F7;overflow: hidden;}
-.sectionh{height: 570/@r;position: relative;overflow: hidden;}
+//.sectionh{height:670/@r;position: relative;}
 .color{color: #B60005 !important;}
 .bgcolor{background: #B60005 !important;}
 .bor_bn{border-bottom:1px solid #B60005;}
@@ -86,11 +91,11 @@ header{background: #fff;width: 100%;height: 100/@r;background: #fff;}
 .nav{float:left;}
 .sct{width:94%;height: 540/@r;background: #f7f7f7;padding:0 3%;}
 .nav_icon{float: left;width: 100%;}
-.nav_icon span{float: left;width: 95/@r;margin:30/@r 75/@r;}
+.nav_icon span{float: left;width: 95/@r;margin:20/@r 45/@r;}
 .nav_icon span p{float: left;}
 .nav_icon span p a{font-size:22/@r;color: #232323;float: left;display: block;width: 100%;text-align:center;}
 .nav_icon span p:nth-of-type(1){width: 100%;height:95/@r;}
-.nav_icon span p:nth-of-type(2){margin-top: 20/@r;width: 100%;height: 22/@r;}
+.nav_icon span p:nth-of-type(2){margin-top:15/@r;width: 100%;height: 22/@r;}
 .new_box{width: 100%;background: url(../img/logos.png) no-repeat #fff 95% 85%;height:90%;background-size:122/@r 171/@r;}
 
 
@@ -129,7 +134,7 @@ footer p{float: left;width: 100%;font-size: 16/@r;text-align: center;color: #000
 //动态
 .new_s{width:96%;height:95/@r;padding:10/@r 0;float: left;border-bottom: 1px solid #e5e5e5;margin:0 2%;}
 .new_s:nth-last-of-type(1){border-bottom:0;}
-.new_boxs{width: 100%;background: #fff;padding-top:10/@r;margin-top:-10/@r;float: left;overflow: hidden;position: relative;overflow-x: hidden;overflow-y: auto;height: 100%;}
+.new_boxs{width:96%;background: #fff;float: left;position: absolute;left:2%;top:0;z-index: 99999;}
 .logol{position: absolute;right:30/@r;bottom: 20/@r;width: 122/@r;height: 172/@r;z-index:999999;}
 .new_left{float: left;display: block;overflow: hidden;width:24%;height: 100/@r;}
 .new_right{width: 76%;height: 100%;float: left;display: block;}
@@ -150,7 +155,6 @@ footer p{float: left;width: 100%;font-size: 16/@r;text-align: center;color: #000
 //product
 
 .product{background: #fff;width: 40%;margin:30/@r 5% 30/@r 5%;overflow: hidden;float: left;}
-//.product img{width: 100%;max-width: 100%;display: block;float: left;}
 .product span{width:100%;float: left;display: block;height:240/@r;}
 .product span img{width: 100%;height:240/@r;}
 .product p a{text-align: center;background:#f3e1be;color: #232323;float: left;width:100%;font-size: 24/@r;text-align: center;padding:5/@r 0;}
@@ -173,3 +177,10 @@ footer p{float: left;width: 100%;font-size: 16/@r;text-align: center;color: #000
 .hx{float: left;width:100%;height:15/@r;background: #F7F7F7;}
 .hx div{width:96%;height: 100%;float: left;background: #fff;margin: 0 2%;}
 .ncd{float: left;width:100%;color: #333333;font-size:23/@r;line-height:200%;}
+
+
+.soills{position: relative;height:570/@r;overflow-y: scroll;}
+.soilla{overflow-x:hidden;overflow-y:scroll;}
+.scrolls{padding: 0;}
+.hxs{width: 100% !important;height:10/@r !important;background:#F7F7F7 !important;padding: 10/@r 0 10/@r 0 !important;}
+.hxs div{width: 100% ;background: #fff;height: 7/@r;}

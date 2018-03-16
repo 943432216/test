@@ -1,5 +1,5 @@
 <ul>
-	<li id="t0">
+	<li  class="staTwo">
 		<div class="width float">
 			<a href="index.php">首页</a>
 		</div>
@@ -57,10 +57,13 @@
 			<?php }}?>
 		</ul>
 	</li>
-	<li id="t5">
+	<li id="t7" class="staTwo">
+		<div class="width float"><a href="/info.php?CateId=6">视频中心</a></div>
+	</li>
+	<li id="t5" class="staTwo">
 		<div class="width float"><a href="/contact.php?AId=11">联系心宝</a></div>
 	</li>
-	<li id="t6">
+	<li id="t6" class="staTwo">
 		<div class="width float"><a href="https://sso.jingoal.com/#/login">员工登录</a></div>
 	</li>
 </ul>

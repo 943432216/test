@@ -39,7 +39,7 @@ switch ($_GET['CateId']) {
 
 	<head>
 		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width,user-scalable=no" />
+		<meta name="viewport" content="width=device-width,user-scalable=yes" />
 		<title>心宝药业</title>
 		<link rel="stylesheet" type="text/css" href="css/main.css" />
 		<link rel="stylesheet" type="text/css" href="css/dome1.css"/>
@@ -83,15 +83,21 @@ switch ($_GET['CateId']) {
 				</div>
 			</div>
 			<?php if ($CateId != 8) { ?>
-				<section class="float width sectionh">
+				<section class="float width scrolls">
 				<div class="stc_title"><img src="img/<?=$pic_name?>" alt=""  class="img"/></div>
-				<div class="logol"><img src="img/logos.png" class="img"/></div>
-				<div class="_con">
-					<div class="new_boxs float">
+				<div class="_con soills">
+					<ul id="new_boxs" class="new_boxs float">
 						
-					</div>
+					</ul>
 				</div>
+				<div class="logol"><img src="img/logos.png" class="img"/></div>
 			</section>
+			<div class="hx">
+				<div></div>
+			</div>
+			<div class="hxs float">
+				<div></div>
+			</div>
 			<?php }else{ ?>
 			<section class="float width">
 				<div class="stc_title"><img src="img/<?=$pic_name?>" alt=""  class="img"/></div>
@@ -115,7 +121,7 @@ switch ($_GET['CateId']) {
 			$('.company_bn').find('img').addClass('img');
 			linkages('info','#t3');
 			cj(xs_state);
-			startsd();
+			starts()
 		})
 	</script>
 

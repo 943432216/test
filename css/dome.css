@@ -62,3 +62,71 @@
 .tcs {
   padding-bottom: 1.2rem;
 }
+.chairman {
+  width: 100%;
+  height: 14rem;
+  float: left;
+  position: relative;
+  overflow: hidden;
+}
+.logor {
+  background: url(../img/logor.png) no-repeat left 1.1rem;
+  background-size: 4rem 10.6rem;
+  width: 4rem;
+  height: 12rem;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+.chair_con {
+  float: left;
+  width: 100%;
+  background: #fff;
+  overflow: hidden;
+  padding: 1.1rem 0;
+}
+.chair_con span {
+  display: block;
+  float: left;
+  overflow: hidden;
+}
+.cha_nr {
+  width: 60%;
+  padding: 0 6% 0 2%;
+}
+.cha_nr p {
+  text-indent: 2em;
+  font-size: 0.42rem;
+  line-height: 160%;
+  letter-spacing: 0.04rem;
+  float: left;
+  width: 100%;
+  color: #323232;
+}
+.cha_nr h3 {
+  float: left;
+  width: 100%;
+  font-size: 0.42rem;
+  color: #323232;
+}
+.cha_pic {
+  width: 26%;
+  float: left;
+  margin-right: 2%;
+}
+.cha_pic img {
+  width: 100%;
+  display: block;
+  float: left;
+  margin-top: 20%;
+}
+.cha_pic p {
+  text-align: center;
+  width: 100%;
+  height: 0.6rem;
+  line-height: 0.6rem;
+  font-size: 0.36rem;
+  color: #323232;
+  margin-top: 0.2rem;
+  float: left;
+}

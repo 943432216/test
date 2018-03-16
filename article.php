@@ -47,7 +47,7 @@ if($GroupId==1){
 
 	<head>
 		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width,user-scalable=no" />
+		<meta name="viewport" content="width=device-width,user-scalable=yes"/>
 		<title>心宝药业</title>
 		<link rel="stylesheet" type="text/css" href="css/main.css" />
 		<link rel="stylesheet" type="text/css" href="css/dome.css"/>
@@ -91,7 +91,23 @@ if($GroupId==1){
 				<div class="stc_title"><img src="img/<?=$pic_name?>" alt=""  class="img"/></div>
 				<div class="_con">
 					<?php if ($_GET['AId'] == '4') {?>
-						<img src="img/spend.png" alt="董事长致辞" class="img tcs"/>
+						<div class="chairman">
+							<div class="logor"></div>
+							<div class="chair_con">
+								<span class="cha_nr">
+									<h3>衷心感谢关注心宝药业的各界朋友：</h3>
+									<p>心宝药业已经走过了30多年的发展历程。</p>
+									<p>30年前，心宝丸的问世与造福于国人，凝聚了太多人的智慧与汗水，同时也成就了今天的心宝药业。在此我衷心的感谢大家！</p>
+									<p>一路走来，我们坚持诚实守信，合作共赢的经营理念。确立了“行仁心制仁药，怀德心纳贤才，重信心共发展”的核心价值观。</p>
+									<p>时代在前进，市场在变化，心宝人将始终怀着“铸就百年心宝，造福天下苍生”的执着与梦想，聚焦主页，做强做大。以生产质量可靠、疗效确切的产品为己任。</p>
+									<p>无论岁月怎么变化，心宝药业将是您永远最可信赖的朋友。</p>
+								</span>
+								<span class="cha_pic">
+									<img src="img/35d150bd35.jpg"/>
+									<p>(董事长郭永周)</p>
+								</span>
+							</div>
+						</div>
 					<?php } else {
 						echo $article_row['Contents'];
 					}

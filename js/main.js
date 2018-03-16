@@ -1,21 +1,5 @@
-function startsd() {
-	var flag = setInterval('AutoScroll("._con")', 1000)
-	$('.new_s').on({
-		touchstart: function() {
-			clearInterval(flag);
-		},
-		touchmove: function() {
-			clearInterval(flag);
-		},
-		touchend: function() {
-			flag = setInterval('AutoScroll("._con")', 1000)
-		}
-	})
-}
-
 function cj(data) {
-	//	console.log(data);
-	var sn = '<div class="new_s"><span class="new_left"><img src="" class="img"/></span><span class="new_right"><ul><li><a href=""></a></li><li><a href="" class="title"></a></li></ul></span></div>';
+	var sn = '<li class="new_s"><span class="new_left"><img src="" class="img"/></span><span class="new_right"><ul><li><a href=""></a></li><li><a href="" class="title"></a></li></ul></span></li>';
 	$.each(data, function(a, b) {
 		$('.new_boxs').append(sn);
 	});
@@ -24,27 +8,60 @@ function cj(data) {
 		$('.new_s').eq(i).children('.new_left').children('img').attr('src', data[i].ThumbPic);
 		$('.new_s').eq(i).children('.new_right').find('li').eq(0).children('a').html(data[i].Title);
 		$('.new_s').eq(i).children('.new_right').find('li').eq(1).children('a').html(data[i].BriefDescription);
-	}
+	};
 }
 
-function AutoScroll(obj) {
-	$(obj).find(".new_boxs:first").animate({
-			marginTop: "-25px"
+function starts() {
+	var oUl = document.getElementById('new_boxs');
+	oUl.innerHTML = oUl.innerHTML + oUl.innerHTML + oUl.innerHTML + oUl.innerHTML;
+	//	console.log($('.new_boxs').height());
+	var flat = 1;
+	AutoScroll()
+}
+
+function AutoScroll() {
+	var $hei = $('.new_boxs').height();
+	$('.new_boxs').animate({
+		top: -$hei + 10 + 'px'
+	}, 300000, 'linear', function() {
+		$(this).css('top', 0);
+		aul();
+	});
+	$('.new_boxs').on({
+		touchstart: function() {
+			$('.new_boxs').stop()
 		},
-		400,
-		function() {
-			$(this).css({
-				marginTop: "0px"
-			}).find(".new_s:first").appendTo(this);
-		});
+		touchmove: function() {
+			$('.new_boxs').stop()
+		},
+		touchend: function() {
+			$('.new_boxs').animate({
+				top: -$hei + 'px'
+			},300000, 'linear');
+		}
+	})
+}
+
+function aul() {
+	var $hei = $('.new_boxs').height();
+	$('.new_boxs').animate({
+		top: -$hei + 10 + 'px'
+	}, 20000, 'linear', function() {
+		$(this).css('top', 0);
+		aul();
+	});
 }
 
 function linkages(html, id) {
 	var urs = window.location.href;
-	var a, b, c, d, f;
+	var a, b, c, d, f, g, n, m;
 	a = urs.split('?')[1];
-	b = a.split('=')[0];
-	c = a.split('=')[1];
+	g = a.split('&')[0];
+	b = g.split('=')[0];
+	c = g.split('=')[1];
+	n = a.split('&')[1];
+	m = n.split('=')[1];
+	//	console.log(m)
 	switch(b) {
 		case 'AId':
 			d = 0;
@@ -107,8 +124,13 @@ function linkages(html, id) {
 		f = '龟鹿补肾片健康手册';
 	}
 	$('.staOne').children('ul').slideUp();
-	$(id).children('ul').slideDown();
-	$(id).find('div').addClass('bgcolor');
+	if(m == t2 || m == t3 || m == t4 || m == t1) {
+		$(id).children('ul').slideDown();
+	} else {
+		$(id).children('ul').slideUp();
+	}
+
+	$('#' + m).find('div').addClass('bgcolor');
 	$('.i_ul').find('li').each(function() {
 		if($(this).children('a').html() == f) {
 			$(this).children('a').addClass('color');
@@ -125,16 +147,73 @@ function linkages(html, id) {
 }
 
 function inc(num) {
+	var ids = null;
+	var urla = null;
+	switch(num) {
+		case '公司动态':
+			ids = 't4';
+			break;
+		case '行业动态':
+			ids = 't4';
+			break;
+		case '视频中心':
+			ids = 't4';
+			break;
+		case '心肾相交理论':
+			ids = 't3';
+			break;
+		case '心宝丸的临床应用':
+			ids = 't3';
+			break;
+		case '蒲地蓝消炎片':
+			ids = 't2';
+			break;
+		case '蒲蓝地消炎胶囊':
+			ids = 't2';
+			break;
+		case '心宝丸':
+			ids = 't2';
+			break;
+		case '公司简介':
+			ids = 't1';
+			break;
+		case '董事长致词':
+			ids = 't1';
+			break;
+		case '发展历程':
+			ids = 't1';
+			break;
+		case '企业文化':
+			ids = 't1';
+			break;
+		case '企业荣誉':
+			ids = 't1';
+			break;
+		case '龟鹿补肾片':
+			ids = 't2';
+			break;
+		case '龟鹿补肾片健康手册':
+			ids = 't3';
+			break;
+	}
 	$('.banner_nav').find('li').each(function() {
 		if($(this).children('a').html() == num) {
 			$(this).children('a').addClass('bor_bn');
 		}
-	})
+		$(this).children('a').click(function() {
+			urla = $(this).attr('href') + '&a=' + ids;
+			$(this).attr('href', urla);
+		})
+	});
 	$('.banner_navs').find('li').each(function() {
 		if($(this).children('a').html() == num) {
 			$(this).children('a').addClass('bor_bn');
 		}
-	})
+		$(this).children('a').click(function() {
+			urla = $(this).attr('href') + '&a=' + ids;
+			$(this).attr('href', urla);
+		})
+	});
 }
 
 function headers() {
@@ -148,9 +227,9 @@ function headers() {
 }
 
 function linkage(data, id, htmls) {
-	var a, b,c;
+	var a, b, c;
 	b = data.toString();
-	c=htmls
+	c = htmls
 	if(c == 'product') {
 		switch(b) {
 			case '10':
@@ -183,14 +262,14 @@ function linkage(data, id, htmls) {
 				break;
 			case '10':
 				a = '龟鹿补肾片健康手册';
-				break;	
+				break;
 		}
-		
+
 	}
-//	console.log(c == 'product')
 	$('.staOne').children('ul').slideUp();
 	$(id).children('ul').slideDown();
 	$(id).find('div').addClass('bgcolor');
+
 	$('.i_ul').find('li').each(function() {
 		if($(this).children('a').html() == a) {
 			$(this).children('a').addClass('color');
@@ -203,3 +282,76 @@ function linkage(data, id, htmls) {
 		$(this).children('ul').slideToggle();
 	})
 }
+
+function sendID() {
+	var urls = window.location.href;
+	var urla = null;
+	var ids = null;
+	var us = null;
+	$('.i_uls li').each(function() {
+		$(this).find('a').click(function() {
+			ids = $(this).parent('li').parents('li').attr('id');
+			urla = $(this).attr('href') + '&a=' + ids;
+			$(this).attr('href', urla);
+		})
+	});
+	$('.staTwo').each(function() {
+		$(this).click(function() {
+			ids = $(this).attr('id');
+			if(ids != undefined) {
+				urla = $(this).find('a').attr('href') + '&a=' + ids;
+				$(this).find('a').attr('href', urla);
+			}
+
+		})
+	});
+	$('.nav_icon').find('a').each(function() {
+		//		console.log($(this));
+		$(this).click(function() {
+			us = $(this).parents('span').children('p').eq(1).children('a').html();
+			switch(us) {
+				case '关于心宝':
+					ids = 't1';
+					break;
+				case '产品中心':
+					ids = 't2';
+					break;
+				case '心肾同治':
+					ids = 't3';
+					break;
+				case '最新动态':
+					ids = 't4';
+					break;
+				case '联系心宝':
+					ids = 't5';
+					break;
+				case '员工登录':
+					ids = 't6';
+					break;
+			}
+			urla = $(this).attr('href') + '&a=' + ids;
+			$(this).attr('href', urla);
+		})
+	});
+	$('.moreNew').children('a').click(function() {
+		urla = $(this).attr('href') + '&a=t4';
+		$(this).attr('href', urla);
+	});
+	//	$('new_s').mouseover()
+	$('.new_s a').each(function() {
+		$(this).on({
+			touchstart: function() {
+				$(this).css('background', '#F7F7F7');
+				alert(1)
+			},
+			touchend: function() {
+				$(this).css('background', '#fff');
+				alert(0)
+			}
+		})
+	})
+}
+
+$(function() {
+	sendID();
+})

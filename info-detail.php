@@ -18,7 +18,7 @@ $banner=$db->get_one('ad',"AId='5'");
 
 	<head>
 		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width,user-scalable=no" />
+		<meta name="viewport" content="width=device-width,user-scalable=yes" />
 		<title>心宝药业</title>
 		<link rel="stylesheet" type="text/css" href="css/main.css" />
 		<link rel="stylesheet" type="text/css" href="css/dome1.css" />

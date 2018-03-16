@@ -39,7 +39,7 @@ $fresh_state = json_encode($fresh_state, JSON_UNESCAPED_UNICODE);
 
 	<head>
 		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width,user-scalable=no" />
+		<meta name="viewport" content="width=device-width,user-scalable=yes" />
 		<title>心宝药业</title>
 		<link rel="stylesheet" type="text/css" href="css/main.css" />
 		<link rel="stylesheet" type="text/css" href="css/dome1.css" />
@@ -85,58 +85,14 @@ $fresh_state = json_encode($fresh_state, JSON_UNESCAPED_UNICODE);
 			<?php  
 			if ($CateId != 6) {
 			?>
-			<section class="float width sectionh">
+			<section class="float width scrolls">
 				<div class="stc_title"><img src="img/<?=$pic_name?>" alt="" class="img" /></div>
-				<div class="_con">
-					<div class="logol"><img src="img/logos.png" class="img"/></div>
-					<div class="new_boxs float">
-						<!--<div class="new_s">
-							<span class="new_left"><img src="img/50f750d822.jpg" class="img"/></span>
-							<span class="new_right">
-								<ul>
-									<li><a href="#">喜讯！喜讯！</a></li>
-									<li><a href="#" class="title">心宝药业获2017年度广东省工程技术研究中心认定</a></li>
-								</ul>
-							</span>
-						</div>
-						<div class="new_s">
-							<span class="new_left"><img src="img/50f750d822.jpg" class="img"/></span>
-							<span class="new_right">
-								<ul>
-									<li><a href="#">喜讯！喜讯！</a></li>
-									<li><a href="#" class="title">心宝药业获2017年度广东省工程技术研究中心认定</a></li>
-								</ul>
-							</span>
-						</div>
-						<div class="new_s">
-							<span class="new_left"><img src="img/50f750d822.jpg" class="img"/></span>
-							<span class="new_right">
-								<ul>
-									<li><a href="#">喜讯！喜讯！</a></li>
-									<li><a href="#" class="title">心宝药业获2017年度广东省工程技术研究中心认定</a></li>
-								</ul>
-							</span>
-						</div>
-						<div class="new_s">
-							<span class="new_left"><img src="img/50f750d822.jpg" class="img"/></span>
-							<span class="new_right">
-								<ul>
-									<li><a href="#">喜讯！喜讯！</a></li>
-									<li><a href="#" class="title">心宝药业获2017年度广东省工程技术研究中心认定</a></li>
-								</ul>
-							</span>
-						</div>
-						<div class="new_s">
-							<span class="new_left"><img src="img/50f750d822.jpg" class="img"/></span>
-							<span class="new_right">
-								<ul>
-									<li><a href="#">喜讯！喜讯！</a></li>
-									<li><a href="#" class="title">心宝药业获2017年度广东省工程技术研究中心认定</a></li>
-								</ul>
-							</span>
-						</div>-->
-					</div>
+				<div class="_con soills">
+					<ul id="new_boxs" class="new_boxs float">
+					</ul>
+					
 				</div>
+				<div class="logol"><img src="img/logos.png" class="img"/></div>
 			</section>
 			<?php } else { ?>
 			<section class="float width">
@@ -145,6 +101,7 @@ $fresh_state = json_encode($fresh_state, JSON_UNESCAPED_UNICODE);
 					<div class="videos">
 						<video width="100%" height="85%" controls="controls" poster="img/videofm.png">
 							<source src="myvideo.mp4" type="video/mp4"></source>
+							<source src="myvideo_1.mp4" type="video/mp4"></source>
 							<object width="" height="" type="application/x-shockwave-flash" data="myvideo.swf">
 								<param name="movie" value="myvideo.swf" />
 								<param name="flashvars" value="autostart=true&amp;file=myvideo.swf" />
@@ -171,6 +128,10 @@ $fresh_state = json_encode($fresh_state, JSON_UNESCAPED_UNICODE);
 			<div class="hx">
 				<div></div>
 			</div>
+			<div class="hxs float">
+				<div></div>
+			</div>
+			
 			<!--<div class="blogroll">
 				<div class="blogroll_left">友情链接</div>
 				<div class="blogroll_right">
@@ -192,7 +153,7 @@ $fresh_state = json_encode($fresh_state, JSON_UNESCAPED_UNICODE);
 		$(function() {
 			linkages('product','#t4');
 			cj(fresh_state);
-			startsd();
+			starts()
 		})
 	</script>
 
