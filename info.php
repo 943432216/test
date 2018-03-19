@@ -99,7 +99,7 @@ $fresh_state = json_encode($fresh_state, JSON_UNESCAPED_UNICODE);
 				<div class="stc_title"><img src="img/title_video.png" alt=""  class="img"/></div>
 				<div class="_con">
 					<div class="videos">
-						<video width="100%" height="85%" controls="controls" poster="img/videofm.png">
+						<!--<video width="100%" height="85%" controls="controls" poster="img/videofm.png">
 							<source src="myvideo.mp4" type="video/mp4"></source>
 							<source src="myvideo_1.mp4" type="video/mp4"></source>
 							<object width="" height="" type="application/x-shockwave-flash" data="myvideo.swf">
@@ -107,19 +107,57 @@ $fresh_state = json_encode($fresh_state, JSON_UNESCAPED_UNICODE);
 								<param name="flashvars" value="autostart=true&amp;file=myvideo.swf" />
 							</object>
 							当前浏览器不支持 video直接播放，点击这里下载视频： <a href="myvideo.webm">下载视频</a>
-						</video>
+						</video>-->
+						<iframe id="vidse" width="100%" height="80%" frameborder="no" scrolling="no" src='http://player.youku.com/embed/XMTc2MzQ4NTI1Ng==' class="videse"></iframe>
 						<p class="video_title">心宝企业宣传片</p>
 					</div>
 					<div class="videos">
-						<video width="100%" height="85%" controls="controls" poster="img/videofm.png">
+						<!--<video width="100%" height="85%" controls="controls" poster="img/videofm.png">
 							<source src="myvideo.mp4" type="video/mp4"></source>
 							<object width="" height="" type="application/x-shockwave-flash" data="myvideo.swf">
 								<param name="movie" value="myvideo.swf" />
 								<param name="flashvars" value="autostart=true&amp;file=myvideo.swf" />
 							</object>
 							当前浏览器不支持 video直接播放，点击这里下载视频： <a href="myvideo.webm">下载视频</a>
-						</video>
-						<p class="video_title">心宝企业宣传片</p>
+						</video>-->
+						<iframe id="vidse" width="100%" height="80%" frameborder="no" scrolling="no" src='http://player.youku.com/embed/XMjQ3NzE0NTczMg==' class="videse"></iframe>
+						<p class="video_title">养生拳大赛</p>
+					</div>
+					<div class="videos">
+						<!--<video width="100%" height="85%" controls="controls" poster="img/videofm.png">
+							<source src="myvideo.mp4" type="video/mp4"></source>
+							<object width="" height="" type="application/x-shockwave-flash" data="myvideo.swf">
+								<param name="movie" value="myvideo.swf" />
+								<param name="flashvars" value="autostart=true&amp;file=myvideo.swf" />
+							</object>
+							当前浏览器不支持 video直接播放，点击这里下载视频： <a href="myvideo.webm">下载视频</a>
+						</video>-->
+						<iframe id="vidse" width="100%" height="80%" frameborder="no" scrolling="no" src='http://player.youku.com/embed/XMTYwNzQ3ODA0OA==' class="videse"></iframe>
+						<p class="video_title">心宝龟鹿补肾片</p>
+					</div>
+					<div class="videos">
+						<!--<video width="100%" height="85%" controls="controls" poster="img/videofm.png">
+							<source src="myvideo.mp4" type="video/mp4"></source>
+							<object width="" height="" type="application/x-shockwave-flash" data="myvideo.swf">
+								<param name="movie" value="myvideo.swf" />
+								<param name="flashvars" value="autostart=true&amp;file=myvideo.swf" />
+							</object>
+							当前浏览器不支持 video直接播放，点击这里下载视频： <a href="myvideo.webm">下载视频</a>
+						</video>-->
+						<iframe id="vidse" width="100%" height="80%" frameborder="no" scrolling="no" src='http://player.youku.com/embed/XMTYwNzQ2ODY5Ng==' class="videse"></iframe>
+						<p class="video_title">心宝龟鹿补肾片-症状篇</p>
+					</div>
+					<div class="videos">
+						<!--<video width="100%" height="85%" controls="controls" poster="img/videofm.png">
+							<source src="myvideo.mp4" type="video/mp4"></source>
+							<object width="" height="" type="application/x-shockwave-flash" data="myvideo.swf">
+								<param name="movie" value="myvideo.swf" />
+								<param name="flashvars" value="autostart=true&amp;file=myvideo.swf" />
+							</object>
+							当前浏览器不支持 video直接播放，点击这里下载视频： <a href="myvideo.webm">下载视频</a>
+						</video>-->
+						<iframe id="vidse" width="100%" height="80%" frameborder="no" scrolling="no" src='http://player.youku.com/embed/XMTUzNDI0NjUwNA==' class="videse"></iframe>
+						<p class="video_title">心宝养生拳</p>
 					</div>
 				</div>
 			</section>

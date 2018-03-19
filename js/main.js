@@ -129,7 +129,7 @@ function linkages(html, id) {
 	} else {
 		$(id).children('ul').slideUp();
 	}
-
+	$('.i_ul').find('*').removeClass('bgcolor');
 	$('#' + m).find('div').addClass('bgcolor');
 	$('.i_ul').find('li').each(function() {
 		if($(this).children('a').html() == f) {
@@ -268,6 +268,7 @@ function linkage(data, id, htmls) {
 	}
 	$('.staOne').children('ul').slideUp();
 	$(id).children('ul').slideDown();
+	$('.i_ul').find('*').removeClass('bgcolor');
 	$(id).find('div').addClass('bgcolor');
 
 	$('.i_ul').find('li').each(function() {
@@ -385,4 +386,8 @@ function glory(el,data){
 
 $(function() {
 	sendID();
+	$('._con').on('touchmove',function(e){
+		var ev=e||window.event;
+		ev.preventDefault(); 
+	})
 })

@@ -131,8 +131,8 @@ header {
   right: 0;
   top: 2rem;
   z-index: 999999;
-  background: url(../img/navlogo.png) no-repeat bottom #d13600;
-  background-size: 100% 8.6rem;
+  background: url(../img/navlogo.png) no-repeat left bottom #d13600;
+  background-size: 3rem 8.6rem;
   display: none;
 }
 .i_ul ul li {
@@ -701,4 +701,9 @@ footer p {
   width: 100% ;
   background: #fff;
   height: 0.14rem;
+}
+.videse {
+  float: left;
+  display: block;
+  margin: 2% 0;
 }

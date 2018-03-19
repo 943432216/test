@@ -1,6 +1,6 @@
 <ul>
 	<li  class="staTwo">
-		<div class="width float">
+		<div class="width float bgcolor">
 			<a href="index.php">首页</a>
 		</div>
 	</li>

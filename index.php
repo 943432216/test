@@ -122,6 +122,7 @@ $company_state = json_encode($company_state, JSON_UNESCAPED_UNICODE);
 			$('.sy').children('div').addClass('bgcolor')
 			$('#t0').css('background','#B60005');
 			$('.staOne').children('ul').slideUp();
+			$('#marquee ul li').height($('#marquee ul li').height());
 			$('#marquee ul li').height($('.img').height());
 			var unslider06 = $('#marquee').unslider({
 					dots: true,
