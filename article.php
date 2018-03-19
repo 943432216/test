@@ -41,6 +41,11 @@ if($GroupId==1){
 }elseif($GroupId==2){
 	$banner=$db->get_one('ad',"AId='8'");
 }
+
+$dev_arr = $db->get_all('develop', 1, 'dev_cate,time,pic_src,happen');
+$dev_str = json_encode($dev_arr, JSON_UNESCAPED_UNICODE);
+$hor_arr = $db->get_all('honor', 1, 'hor_src,hor_commend');
+$hor_str = json_encode($hor_arr, JSON_UNESCAPED_UNICODE);
 ?>
 <!DOCTYPE html>
 <html>
@@ -90,6 +95,122 @@ if($GroupId==1){
 			<section class="float width b1">
 				<div class="stc_title"><img src="img/<?=$pic_name?>" alt=""  class="img"/></div>
 				<div class="_con">
+					<?php if($AId == 6) { ?>
+						<div class="exper">
+							<div class="float width overflow ex_box">
+								<span class="lc_con">
+									<h3>1984</h3>
+									<p>被誉为“中国救心丸”的星辰牌“心宝丸”在广东省药物研究所震撼问世</p>
+									<img src="img/lcpc.png"/>
+								</span>
+							</div>
+							<div class="float width overflow ex_box">
+								<span class="lc_conr">
+									<h3>1984</h3>
+									<p>被誉为“中国救心丸”的星辰牌“心宝丸”在广东省药物研究所震撼问世</p>
+									<img src="img/lcpc.png"/>
+								</span>
+							</div>
+							<div class="float width overflow ex_box">
+								<span class="lc_con">
+									<h3>1984</h3>
+									<p>被誉为“中国救心丸”的星辰牌“心宝丸”在广东省药物研究所震撼问世</p>
+									<img src="img/lcpc.png"/>
+								</span>
+							</div>
+							<div class="float width overflow ex_box">
+								<span class="lc_conr">
+									<h3>1984</h3>
+									<p>被誉为“中国救心丸”的星辰牌“心宝丸”在广东省药物研究所震撼问世</p>
+									<img src="img/lcpc.png"/>
+								</span>
+							</div>
+							<div class="float width overflow ex_box">
+								<span class="lc_con">
+									<h3>1984</h3>
+									<p>被誉为“中国救心丸”的星辰牌“心宝丸”在广东省药物研究所震撼问世</p>
+									<img src="img/lcpc.png"/>
+								</span>
+							</div>
+							<div class="float width overflow ex_box">
+								<span class="lc_conr">
+									<h3>1984</h3>
+									<p>被誉为“中国救心丸”的星辰牌“心宝丸”在广东省药物研究所震撼问世</p>
+									<img src="img/lcpc.png"/>
+								</span>
+							</div>
+							<div class="float width overflow ex_box">
+								<span class="lc_con">
+									<h3>1984</h3>
+									<p>被誉为“中国救心丸”的星辰牌“心宝丸”在广东省药物研究所震撼问世</p>
+									<img src="img/lcpc.png"/>
+								</span>
+							</div>
+							<div class="float width overflow ex_box">
+								<span class="lc_conr">
+									<h3>1984</h3>
+									<p>被誉为“中国救心丸”的星辰牌“心宝丸”在广东省药物研究所震撼问世</p>
+									<img src="img/lcpc.png"/>
+								</span>
+							</div>
+						</div>
+					<?php } ?>
+					<?php if($AId == 15) { ?>
+						<div class="ry" style="display: none;">
+							<span class="ry_box float">
+								<img src="img/zs.png" class="img"/>
+								<p class="width float">星辰品牌心宝丸荣获中国药品市场消费者满意首选品牌</p>
+							</span>
+							<span class="ry_box float">
+								<img src="img/zs.png" class="img"/>
+								<p class="width float">星辰品牌心宝丸荣获中国药品市场消费者满意首选品牌</p>
+							</span>
+							<span class="ry_box float">
+								<img src="img/zs.png" class="img"/>
+								<p class="width float">星辰品牌心宝丸荣获中国药品市场消费者满意首选品牌</p>
+							</span>
+							<span class="ry_box float">
+								<img src="img/zs.png" class="img"/>
+								<p class="width float">星辰品牌心宝丸荣获中国药品市场消费者满意首选品牌</p>
+							</span>
+							<span class="ry_box float">
+								<img src="img/zs.png" class="img"/>
+								<p class="width float">星辰品牌心宝丸荣获中国药品市场消费者满意首选品牌</p>
+							</span>
+							<span class="ry_box float">
+								<img src="img/zs.png" class="img"/>
+								<p class="width float">星辰品牌心宝丸荣获中国药品市场消费者满意首选品牌</p>
+							</span>
+							<span class="ry_box float">
+								<img src="img/zs.png" class="img"/>
+								<p class="width float">星辰品牌心宝丸荣获中国药品市场消费者满意首选品牌</p>
+							</span>
+							<span class="ry_box float">
+								<img src="img/zs.png" class="img"/>
+								<p class="width float">星辰品牌心宝丸荣获中国药品市场消费者满意首选品牌</p>
+							</span>
+							<span class="ry_box float">
+								<img src="img/zs.png" class="img"/>
+								<p class="width float">星辰品牌心宝丸荣获中国药品市场消费者满意首选品牌</p>
+							</span>
+							<span class="ry_box float">
+								<img src="img/zs.png" class="img"/>
+								<p class="width float">星辰品牌心宝丸荣获中国药品市场消费者满意首选品牌</p>
+							</span>
+							<span class="ry_box float">
+								<img src="img/zs.png" class="img"/>
+								<p class="width float">星辰品牌心宝丸荣获中国药品市场消费者满意首选品牌</p>
+							</span>
+							<span class="ry_box float">
+								<img src="img/zs.png" class="img"/>
+								<p class="width float">星辰品牌心宝丸荣获中国药品市场消费者满意首选品牌</p>
+							</span>
+							<span class="ry_box float">
+								<img src="img/zs.png" class="img"/>
+								<p class="width float">星辰品牌心宝丸荣获中国药品市场消费者满意首选品牌</p>
+							</span>
+						</div>
+					<?php } ?>
 					<?php if ($_GET['AId'] == '4') {?>
 						<div class="chairman">
 							<div class="logor"></div>
@@ -108,10 +229,11 @@ if($GroupId==1){
 								</span>
 							</div>
 						</div>
-					<?php } else {
+					<?php } ?>	
+					<?php if(!in_array($AId, array(4,6,15))) { 
 						echo $article_row['Contents'];
 					}
-					?>					
+					?>				
 				</div>
 			</section>
 			<?php include('/footer.php'); ?>
