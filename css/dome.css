@@ -130,3 +130,112 @@
   margin-top: 0.2rem;
   float: left;
 }
+.ry {
+  width: 100%;
+  float: left;
+  padding: 1.72rem 0 0 0;
+  background: url(../img/rybg.jpg) no-repeat left top #ffffff;
+  background-size: 100% 21.02rem;
+}
+.ry_box {
+  width: 26%;
+  margin: 0 1%;
+  overflow: hidden;
+  display: block;
+  padding: 0 2%;
+  margin-top: 0.4rem;
+}
+.ry_box p {
+  text-align: center;
+  font-size: 0.36rem;
+  color: #323232;
+  line-height: 160%;
+  margin-top: 0.2rem;
+  float: left;
+}
+.ry_box:nth-of-type(1) {
+  margin-left: 33%;
+}
+.exper {
+  float: left;
+  width: 100%;
+  overflow: hidden;
+  background: url(../img/wapxllc_bg.png) no-repeat left top;
+  background-size: 100%;
+  padding: 0.6rem 0;
+}
+.lc_con {
+  width: 45%;
+  overflow: hidden;
+  margin: 0 50% 0 0%;
+  display: block;
+  background: url(../img/cen.png) no-repeat right top;
+  background-size: 0.8rem auto;
+  padding-left: 5%;
+}
+.lc_con h3 {
+  width: 85%;
+  float: left;
+  font-size: 0.52rem;
+  color: #b50005;
+  text-align: right;
+  padding-right: 15%;
+}
+.lc_con p {
+  overflow: hidden;
+  display: block;
+  float: left;
+  color: #323232;
+  width: 85%;
+  padding-right: 15%;
+  background: url(../img/hxx.png) no-repeat 93% center;
+  background-size: 0.56rem 0.02rem;
+  font-size: 0.42rem;
+  text-align: right;
+}
+.lc_con img {
+  width: 2.4rem;
+  height: 1.4rem;
+  float: left;
+  display: block;
+}
+.ex_box:nth-of-type(1) h3 {
+  background: url(../img/qz.png) no-repeat;
+  background-size: 0.4rem 0.6rem;
+  background-position: 60%;
+}
+.lc_conr {
+  width: 48%;
+  overflow: hidden;
+  margin: 0 0% 0 44.5%;
+  display: block;
+  background: url(../img/cen.png) no-repeat left top;
+  background-size: 0.8rem auto;
+  padding-right: 5%;
+}
+.lc_conr h3 {
+  width: 85%;
+  float: left;
+  font-size: 0.52rem;
+  color: #b50005;
+  text-align: left;
+  padding-left: 15%;
+}
+.lc_conr p {
+  overflow: hidden;
+  display: block;
+  float: left;
+  color: #323232;
+  width: 85%;
+  padding-left: 15%;
+  background: url(../img/hxx.png) no-repeat 7% center;
+  background-size: 0.56rem 0.02rem;
+  font-size: 0.42rem;
+  text-align: left;
+}
+.lc_conr img {
+  width: 2.4rem;
+  height: 1.4rem;
+  float: right;
+  display: block;
+}
