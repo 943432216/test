@@ -37,7 +37,7 @@ function AutoScroll() {
 		touchend: function() {
 			$('.new_boxs').animate({
 				top: -$hei + 'px'
-			},300000, 'linear');
+			}, 300000, 'linear');
 		}
 	})
 }
@@ -350,6 +350,37 @@ function sendID() {
 			}
 		})
 	})
+}
+
+function xllc(data) {
+	console.log(data)
+	var $lcleft = '<div class="float width overflow ex_box"><span class="lc_con"><h3></h3><div class="lc_conbox width float"><p></p><img src=""/></div></span></div>';
+//	var $lc_con = '<div class="lc_conbox width float"><p></p><img src=""/></div>'
+	var $lcright = '<div class="float width overflow ex_box"><span class="lc_conr"><h3></h3><div class="lc_conbox width float"><p></p><img src=""/></div></span></div>';
+	$.each(data, function(a, b) {
+		console.log(b)
+		if(a % 2 == 0) {
+			$('.exper').append($lcleft);
+			$('.exper').children('div').eq(a).find('h3').html(b.time);
+			$('.exper').children('div').eq(a).find('img').attr('src', b.pic_src);
+			$('.exper').children('div').eq(a).find('p').html(b.happen);
+		} else {
+			$('.exper').append($lcright);
+			$('.exper').children('div').eq(a).find('h3').html(b.time);
+			$('.exper').children('div').eq(a).find('img').attr('src', b.pic_src);
+			$('.exper').children('div').eq(a).find('p').html(b.happen);
+		}
+
+	})
+}
+function glory(el,data){
+	var $rybox='<span class="ry_box float"><img src="" class="img"/><p class="width float"></p></span>';
+	console.log(data);
+	$.each(data, function(a,b) {
+		$(el).append($rybox);
+		$(el).children('span').eq(a).find('img').attr('src',b.hor_src);
+		$(el).children('span').eq(a).find('p').html(b.hor_commend);
+	});
 }
 
 $(function() {

@@ -63,6 +63,10 @@ $hor_str = json_encode($hor_arr, JSON_UNESCAPED_UNICODE);
 				html.style.fontSize = w / 15 + 'px';
 			})();
 		</script>
+		<script type="text/javascript">
+			var lc=<?=$dev_str?>;
+			var ry=<?=$hor_str?>;
+		</script>
 	</head>
 
 	<body>
@@ -97,67 +101,91 @@ $hor_str = json_encode($hor_arr, JSON_UNESCAPED_UNICODE);
 				<div class="_con">
 					<?php if($AId == 6) { ?>
 						<div class="exper">
-							<div class="float width overflow ex_box">
+							<!--<div class="float width overflow ex_box">
 								<span class="lc_con">
 									<h3>1984</h3>
-									<p>被誉为“中国救心丸”的星辰牌“心宝丸”在广东省药物研究所震撼问世</p>
-									<img src="img/lcpc.png"/>
+									<div class="lc_conbox width float">
+										<p>被誉为“中国救心丸”的星辰牌“心宝丸”在广东省药物研究所震撼问世</p>
+										<img src="img/lcpc.png"/>
+									</div>
 								</span>
 							</div>
 							<div class="float width overflow ex_box">
 								<span class="lc_conr">
 									<h3>1984</h3>
-									<p>被誉为“中国救心丸”的星辰牌“心宝丸”在广东省药物研究所震撼问世</p>
-									<img src="img/lcpc.png"/>
+									<div class="lc_conbox width float">
+										<p>被誉为“中国救心丸”的星辰牌“心宝丸”在广东省药物研究所震撼问世</p>
+										<img src="img/lcpc.png"/>
+									</div>
 								</span>
 							</div>
 							<div class="float width overflow ex_box">
 								<span class="lc_con">
 									<h3>1984</h3>
-									<p>被誉为“中国救心丸”的星辰牌“心宝丸”在广东省药物研究所震撼问世</p>
-									<img src="img/lcpc.png"/>
+									<div class="lc_conbox width float">
+										<p>被誉为“中国救心丸”的星辰牌“心宝丸”在广东省药物研究所震撼问世</p>
+										<img src="img/lcpc.png"/>
+									</div>
 								</span>
 							</div>
 							<div class="float width overflow ex_box">
 								<span class="lc_conr">
 									<h3>1984</h3>
-									<p>被誉为“中国救心丸”的星辰牌“心宝丸”在广东省药物研究所震撼问世</p>
-									<img src="img/lcpc.png"/>
+									<div class="lc_conbox width float">
+										<p>被誉为“中国救心丸”的星辰牌“心宝丸”在广东省药物研究所震撼问世</p>
+										<img src="img/lcpc.png"/>
+									</div>
 								</span>
 							</div>
 							<div class="float width overflow ex_box">
 								<span class="lc_con">
 									<h3>1984</h3>
-									<p>被誉为“中国救心丸”的星辰牌“心宝丸”在广东省药物研究所震撼问世</p>
-									<img src="img/lcpc.png"/>
+									<div class="lc_conbox width float">
+										<p>被誉为“中国救心丸”的星辰牌“心宝丸”在广东省药物研究所震撼问世</p>
+										<img src="img/lcpc.png"/>
+									</div>
 								</span>
 							</div>
 							<div class="float width overflow ex_box">
 								<span class="lc_conr">
 									<h3>1984</h3>
-									<p>被誉为“中国救心丸”的星辰牌“心宝丸”在广东省药物研究所震撼问世</p>
-									<img src="img/lcpc.png"/>
+									<div class="lc_conbox width float">
+										<p>被誉为“中国救心丸”的星辰牌“心宝丸”在广东省药物研究所震撼问世</p>
+										<img src="img/lcpc.png"/>
+									</div>
 								</span>
 							</div>
 							<div class="float width overflow ex_box">
 								<span class="lc_con">
 									<h3>1984</h3>
-									<p>被誉为“中国救心丸”的星辰牌“心宝丸”在广东省药物研究所震撼问世</p>
-									<img src="img/lcpc.png"/>
+									<div class="lc_conbox width float">
+										<p>被誉为“中国救心丸”的星辰牌“心宝丸”在广东省药物研究所震撼问世</p>
+										<img src="img/lcpc.png"/>
+									</div>
 								</span>
 							</div>
 							<div class="float width overflow ex_box">
 								<span class="lc_conr">
 									<h3>1984</h3>
-									<p>被誉为“中国救心丸”的星辰牌“心宝丸”在广东省药物研究所震撼问世</p>
-									<img src="img/lcpc.png"/>
+									<div class="lc_conbox width float">
+										<p>被誉为“中国救心丸”的星辰牌“心宝丸”在广东省药物研究所震撼问世</p>
+										<img src="img/lcpc.png"/>
+									</div>
+									<div class="lc_conbox width float">
+										<p>被誉为“中国救心丸”的星辰牌“心宝丸”在广东省药物研究所震撼问世</p>
+										<img src="img/lcpc.png"/>
+									</div>
+									<div class="lc_conbox width float">
+										<p>被誉为“中国救心丸”的星辰牌“心宝丸”在广东省药物研究所震撼问世</p>
+										<img src="img/lcpc.png"/>
+									</div>
 								</span>
-							</div>
+							</div>-->
 						</div>
 					<?php } ?>
 					<?php if($AId == 15) { ?>
-						<div class="ry" style="display: none;">
-							<span class="ry_box float">
+						<div class="ry">
+							<!--<span class="ry_box float">
 								<img src="img/zs.png" class="img"/>
 								<p class="width float">星辰品牌心宝丸荣获中国药品市场消费者满意首选品牌</p>
 							</span>
@@ -208,7 +236,7 @@ $hor_str = json_encode($hor_arr, JSON_UNESCAPED_UNICODE);
 							<span class="ry_box float">
 								<img src="img/zs.png" class="img"/>
 								<p class="width float">星辰品牌心宝丸荣获中国药品市场消费者满意首选品牌</p>
-							</span>
+							</span>-->
 						</div>
 					<?php } ?>
 					<?php if ($_GET['AId'] == '4') {?>
@@ -248,6 +276,10 @@ $hor_str = json_encode($hor_arr, JSON_UNESCAPED_UNICODE);
 			$('._con').find('img').addClass('img');
 			$('._con').find('div').addClass('ncd')
 			linkages('products','#t1');
+//			console.log(lc);
+//			console.log(ry)
+			xllc(lc)
+			glory('.ry',ry)
 		})
 	</script>
 
